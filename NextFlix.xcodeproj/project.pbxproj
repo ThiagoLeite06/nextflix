@@ -13,6 +13,8 @@
 		AFD7CE422715C18300BCA025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE402715C18300BCA025 /* Main.storyboard */; };
 		AFD7CE442715C18500BCA025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE432715C18500BCA025 /* Assets.xcassets */; };
 		AFD7CE472715C18500BCA025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */; };
+		AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE542716469100BCA025 /* MoviesViewController.swift */; };
+		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AFD7CE432715C18500BCA025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFD7CE462715C18500BCA025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFD7CE482715C18500BCA025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD7CE542716469100BCA025 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		AFD7CE56271646A600BCA025 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AFD7CE432715C18500BCA025 /* Assets.xcassets */,
 				AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */,
 				AFD7CE482715C18500BCA025 /* Info.plist */,
+				AFD7CE542716469100BCA025 /* MoviesViewController.swift */,
+				AFD7CE56271646A600BCA025 /* SeriesViewController.swift */,
 			);
 			path = NextFlix;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				AFD7CE3F2715C18300BCA025 /* ViewController.swift in Sources */,
 				AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
+				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
+				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
