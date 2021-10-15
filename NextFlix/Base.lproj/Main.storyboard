@@ -31,8 +31,55 @@
                     <view key="view" contentMode="scaleToFill" id="6C4-Jf-k4V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner-home" translatesAutoresizingMaskIntoConstraints="NO" id="vXC-8B-6GI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="917-V9-XjZ"/>
+                                    <constraint firstAttribute="height" constant="163" id="Ysk-0w-Vzv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Séries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxN-nN-bav">
+                                <rect key="frame" x="37" y="71" width="125" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mais populares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAJ-ne-ubb">
+                                <rect key="frame" x="20" y="183" width="119" height="18"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                <color key="textColor" red="0.85882352941176465" green="0.24313725490196078" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-tp-qGe">
+                                <rect key="frame" x="20" y="240" width="374" height="547"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LK5-Rp-I1Z">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LK5-Rp-I1Z" id="cVv-MG-FRz">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="W1w-GT-eD1"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CAJ-ne-ubb" firstAttribute="top" secondItem="vXC-8B-6GI" secondAttribute="bottom" constant="20" id="2OG-Nm-8Cz"/>
+                            <constraint firstItem="vXC-8B-6GI" firstAttribute="top" secondItem="6C4-Jf-k4V" secondAttribute="top" id="Fxk-Nb-MD1"/>
+                            <constraint firstItem="W1w-GT-eD1" firstAttribute="bottom" secondItem="DKM-tp-qGe" secondAttribute="bottom" constant="26" id="KCk-c1-PMU"/>
+                            <constraint firstItem="W1w-GT-eD1" firstAttribute="trailing" secondItem="DKM-tp-qGe" secondAttribute="trailing" constant="20" id="Yrl-8b-BKG"/>
+                            <constraint firstItem="vXC-8B-6GI" firstAttribute="leading" secondItem="W1w-GT-eD1" secondAttribute="leading" id="oHe-JG-UEy"/>
+                            <constraint firstItem="DKM-tp-qGe" firstAttribute="leading" secondItem="W1w-GT-eD1" secondAttribute="leading" constant="20" id="rCc-sU-v8T"/>
+                            <constraint firstItem="DKM-tp-qGe" firstAttribute="top" secondItem="CAJ-ne-ubb" secondAttribute="bottom" constant="39" id="sHR-uc-iTI"/>
+                            <constraint firstItem="vXC-8B-6GI" firstAttribute="trailing" secondItem="W1w-GT-eD1" secondAttribute="trailing" id="unN-vT-wAN"/>
+                            <constraint firstItem="CAJ-ne-ubb" firstAttribute="leading" secondItem="W1w-GT-eD1" secondAttribute="leading" constant="20" id="w3i-N1-aLz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Séries" image="xmark.bin" catalog="system" id="uZc-oJ-zFb">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFx-Vv-dYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="1033"/>
+            <point key="canvasLocation" x="1028.985507246377" y="1032.5892857142858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vUk-TW-OH9">
@@ -48,6 +95,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e4V-Qi-A4K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZiO-px-APk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,13 +111,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="banner-home" width="1920" height="600"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="xmark.bin" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
