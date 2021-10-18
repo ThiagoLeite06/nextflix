@@ -17,6 +17,8 @@
 		AFD7CE472715C18500BCA025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */; };
 		AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE542716469100BCA025 /* MoviesViewController.swift */; };
 		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
+		D0C154AF271D2CC000DE157F /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C154AE271D2CC000DE157F /* RegisterScreenViewController.swift */; };
+		D0C154B1271D30D000DE157F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C154B0271D30D000DE157F /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		AFD7CE482715C18500BCA025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD7CE542716469100BCA025 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		AFD7CE56271646A600BCA025 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		D0C154AE271D2CC000DE157F /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
+		D0C154B0271D30D000DE157F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5FC413271B27B100605985 /* Movie.swift */,
+				D0C154B0271D30D000DE157F /* Register.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				AFD7CE3A2715C18300BCA025 /* AppDelegate.swift */,
 				AFD7CE3C2715C18300BCA025 /* SceneDelegate.swift */,
 				AFD7CE3E2715C18300BCA025 /* ViewController.swift */,
+				D0C154AE271D2CC000DE157F /* RegisterScreenViewController.swift */,
 				AFD7CE402715C18300BCA025 /* Main.storyboard */,
 				AFD7CE432715C18500BCA025 /* Assets.xcassets */,
 				AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */,
@@ -188,6 +194,8 @@
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
+				D0C154AF271D2CC000DE157F /* RegisterScreenViewController.swift in Sources */,
+				D0C154B1271D30D000DE157F /* Register.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
