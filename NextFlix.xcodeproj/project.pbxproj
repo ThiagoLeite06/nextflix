@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */; };
 		AF5FC412271B26EA00605985 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5FC411271B26EA00605985 /* movies.json */; };
 		AF5FC414271B27B100605985 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC413271B27B100605985 /* Movie.swift */; };
 		AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE3A2715C18300BCA025 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloSelecionadoViewController.swift; sourceTree = "<group>"; };
 		AF5FC411271B26EA00605985 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AF5FC413271B27B100605985 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		AFD7CE372715C18300BCA025 /* NextFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				AFD7CE542716469100BCA025 /* MoviesViewController.swift */,
 				AFD7CE56271646A600BCA025 /* SeriesViewController.swift */,
 				AF5FC411271B26EA00605985 /* movies.json */,
+				38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */,
 			);
 			path = NextFlix;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
+				38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +349,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +378,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
