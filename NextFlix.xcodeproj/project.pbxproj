@@ -17,6 +17,7 @@
 		AFD7CE472715C18500BCA025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */; };
 		AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE542716469100BCA025 /* MoviesViewController.swift */; };
 		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
+		D0376672271FA11000014D1E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0376671271FA11000014D1E /* RegisterViewModel.swift */; };
 		D0C154AF271D2CC000DE157F /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C154AE271D2CC000DE157F /* RegisterScreenViewController.swift */; };
 		D0C154B1271D30D000DE157F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C154B0271D30D000DE157F /* Register.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		AFD7CE482715C18500BCA025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD7CE542716469100BCA025 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		AFD7CE56271646A600BCA025 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		D0376671271FA11000014D1E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = "../../../../Documents/Guilherme Feitosa/Cursos/DH - Desenvolvimento Mobile IOS/MVVM/Desafio TabBar/Desafio_TabBar/Desafio_TabBar/Service/RegisterViewModel.swift"; sourceTree = "<group>"; };
 		D0C154AE271D2CC000DE157F /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
 		D0C154B0271D30D000DE157F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 		AF5FC40F271B263A00605985 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D0376671271FA11000014D1E /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
 				D0C154AF271D2CC000DE157F /* RegisterScreenViewController.swift in Sources */,
 				D0C154B1271D30D000DE157F /* Register.swift in Sources */,
+				D0376672271FA11000014D1E /* RegisterViewModel.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

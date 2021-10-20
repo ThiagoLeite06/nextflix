@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     
     @IBAction func registerButton(_ sender: Any) {
         
-//
+
 //        performSegue(withIdentifier: "RegisterDetail", sender: RegisterScreenViewController())
-//
+
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "RegisterDetail" {
                 if let register = sender as? Register {

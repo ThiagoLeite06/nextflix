@@ -19,15 +19,18 @@ class RegisterScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func cadastrarButton(_ sender: Any) {
+        
+        
     }
     
     @IBAction private func voltarButton(_ sender: Any) {
-        dismiss(animated: true)
+        navigationController?.viewControllers.popLast()
+        
+//        dismiss(animated: true)
     }
     
 }
