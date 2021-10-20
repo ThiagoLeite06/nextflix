@@ -15,11 +15,19 @@ class TituloSelecionadoViewController: UIViewController {
     @IBOutlet weak var sinpseLabel: UILabel!
     @IBOutlet weak var elencoLabel: UILabel!
    
+    var movie: Movie?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
 
     }
     
+    private func setup() {
+        tituloSelecionadoLabel.text = movie?.original_title
+        textoSinopseTextView.text = movie?.overview
+        
+    }
 
 
 }
