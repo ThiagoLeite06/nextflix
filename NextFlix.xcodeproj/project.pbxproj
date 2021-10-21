@@ -18,6 +18,10 @@
 		AFD7CE472715C18500BCA025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */; };
 		AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE542716469100BCA025 /* MoviesViewController.swift */; };
 		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
+		D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBD272219A800C4B72F /* LoginViewController.swift */; };
+		D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */; };
+		D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */; };
+		D0A13CC42722233200C4B72F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC32722233200C4B72F /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		AFD7CE482715C18500BCA025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD7CE542716469100BCA025 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		AFD7CE56271646A600BCA025 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		D0A13CBD272219A800C4B72F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
+		D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D0A13CC32722233200C4B72F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5FC413271B27B100605985 /* Movie.swift */,
+				D0A13CC32722233200C4B72F /* Register.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +94,8 @@
 				AFD7CE542716469100BCA025 /* MoviesViewController.swift */,
 				AFD7CE56271646A600BCA025 /* SeriesViewController.swift */,
 				AFD7CE3E2715C18300BCA025 /* ViewController.swift */,
+				D0A13CBD272219A800C4B72F /* LoginViewController.swift */,
+				D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 				AF5FC40D271B261C00605985 /* Model */,
 				AF5FC40E271B262C00605985 /* View */,
 				AFD7CE3A2715C18300BCA025 /* AppDelegate.swift */,
+				D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */,
 				AFD7CE3C2715C18300BCA025 /* SceneDelegate.swift */,
 				AFD7CE432715C18500BCA025 /* Assets.xcassets */,
 				AFD7CE482715C18500BCA025 /* Info.plist */,
@@ -195,9 +207,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD7CE3F2715C18300BCA025 /* ViewController.swift in Sources */,
+				D0A13CC42722233200C4B72F /* Register.swift in Sources */,
+				D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */,
 				AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */,
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
+				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
+				D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */,
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
 				38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
