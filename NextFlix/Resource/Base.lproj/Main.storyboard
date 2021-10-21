@@ -19,6 +19,9 @@
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Filmes" image="square.and.arrow.up" catalog="system" id="jgc-QU-Nzk"/>
+                    <connections>
+                        <segue destination="ytt-X1-atA" kind="presentation" identifier="SegueFilmeDetailIdentifier" id="deX-Bu-bWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C3-d6-41L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zb9-eB-jxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2317" y="1033"/>
+            <point key="canvasLocation" x="2578" y="567"/>
         </scene>
         <!--Séries-->
         <scene sceneID="pW6-an-SWC">
@@ -148,9 +151,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ytt-X1-atA" kind="presentation" identifier="tituloSelecionadoSegue" trigger="accessoryAction" id="O01-HI-Ga0"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -172,17 +172,20 @@
                     <tabBarItem key="tabBarItem" title="Séries" image="xmark.bin" catalog="system" id="uZc-oJ-zFb">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="ytt-X1-atA" kind="presentation" identifier="SegueDetailIdentifier" id="tOU-yn-Ium"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFx-Vv-dYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.985507246377" y="1032.5892857142858"/>
+            <point key="canvasLocation" x="1235" y="1033"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vUk-TW-OH9">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e4V-Qi-A4K" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ZiO-px-APk">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ZiO-px-APk">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,6 +202,9 @@
             <point key="canvasLocation" x="82.608695652173921" y="566.51785714285711"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="deX-Bu-bWe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="banner-home" width="1920" height="600"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>

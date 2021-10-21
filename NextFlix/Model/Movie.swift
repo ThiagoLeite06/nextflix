@@ -33,4 +33,5 @@ struct Movie: Codable {
     let video: Bool
     let vote_average: Decimal
     let vote_count: Int
+    // let is_movie: Bool - pra usar a mesmo modelo 
 }
