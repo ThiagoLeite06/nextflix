@@ -330,8 +330,8 @@
                                     <constraint firstAttribute="height" constant="200" id="4FV-4Y-lfJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-kT-3KK">
-                                <rect key="frame" x="167" y="324" width="80.5" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-kT-3KK">
+                                <rect key="frame" x="142" y="324" width="130" height="32"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="26"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -401,6 +401,7 @@
                             <constraint firstItem="4Bz-s4-OhC" firstAttribute="top" secondItem="80U-ub-8IN" secondAttribute="bottom" constant="18" id="Zvu-FJ-0XZ"/>
                             <constraint firstItem="3UO-aU-rE1" firstAttribute="trailing" secondItem="7fb-t8-SV7" secondAttribute="trailing" constant="35" id="a7J-fy-KCK"/>
                             <constraint firstItem="7fb-t8-SV7" firstAttribute="top" secondItem="pva-VZ-mSB" secondAttribute="bottom" constant="18" id="avN-dv-S3c"/>
+                            <constraint firstItem="JL5-kT-3KK" firstAttribute="centerX" secondItem="OMp-aj-ffr" secondAttribute="centerX" id="gu3-aa-SYW"/>
                             <constraint firstItem="HAQ-3s-1yo" firstAttribute="leading" secondItem="3UO-aU-rE1" secondAttribute="leading" constant="35" id="hRd-O4-QXB"/>
                             <constraint firstItem="3UO-aU-rE1" firstAttribute="trailing" secondItem="teU-Sk-zoY" secondAttribute="trailing" constant="35" id="jMM-Gc-BmK"/>
                             <constraint firstItem="AZr-EE-GGV" firstAttribute="leading" secondItem="3UO-aU-rE1" secondAttribute="leading" constant="35" id="mXb-CX-l7B"/>
@@ -422,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekf-FR-LEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="567"/>
+            <point key="canvasLocation" x="-284.05797101449275" y="566.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vUk-TW-OH9">
