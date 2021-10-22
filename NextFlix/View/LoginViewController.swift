@@ -27,18 +27,31 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
     
-    @IBAction func loginButton(_ sender: Any) {
+    @IBAction func logarButton(_ sender: Any) {
         
-        if (emailTextField.text == "guilherme@teste.com.br" && senhaTextField.text == "Teste123@") {
-            performSegue(withIdentifier: "", sender: self)
-        }
+        if (emailTextField.text == "guilherme@nextflix.com.br" && senhaTextField.text == "Teste@123") {
+            
+            performSegue(withIdentifier: "showTabBar", sender: self)
+            
+//            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//                if segue.identifier == "showTabBar" {
+//                    if segue.destination is MoviesViewController {
+//                        performSegue(withIdentifier: "showTabBar", sender: self)
+//                    }
+//                }
+            }
         
         textFieldsVazio()
         emailTextFieldVazio()
         senhaTextFieldVazio()
-    }
+        
+        }
+        
+//        textFieldsVazio()
+//        emailTextFieldVazio()
+//        senhaTextFieldVazio()
+//    }
     
     private func textFieldsVazio(){
         if (emailTextField.text!.isEmpty && senhaTextField.text!.isEmpty) {
@@ -104,11 +117,8 @@ class LoginViewController: UIViewController {
     }
     
     
-    
-    @IBAction func registerButton(_ sender: Any) {
-        
-        
-        //        performSegue(withIdentifier: "RegisterDetail", sender: RegisterScreenViewController())
+    @IBAction func registrarButton(_ sender: Any) {
+        performSegue(withIdentifier: "RegisterDetail", sender: RegisterScreenViewController())
         
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "RegisterDetail" {
@@ -119,8 +129,8 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
     }
+    
     
     @IBAction func loginGmailButton(_ sender: Any) {
     }
