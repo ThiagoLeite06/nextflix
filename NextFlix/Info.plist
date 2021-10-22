@@ -7,7 +7,7 @@
 		<key>nextflix</key>
 		<dict>
 			<key>UIPrerenderedIcon</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
