@@ -22,6 +22,8 @@
 		D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */; };
 		D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */; };
 		D0A13CC42722233200C4B72F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC32722233200C4B72F /* Register.swift */; };
+		D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */; };
+		D0A13CC82722D90300C4B72F /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC72722D90300C4B72F /* Serie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
 		D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D0A13CC32722233200C4B72F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
+		D0A13CC72722D90300C4B72F /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				AF5FC413271B27B100605985 /* Movie.swift */,
 				D0A13CC32722233200C4B72F /* Register.swift */,
+				D0A13CC72722D90300C4B72F /* Serie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 				38A496B2271F8BC70005B8C1 /* Resource */,
 				AF5FC40D271B261C00605985 /* Model */,
 				AF5FC40E271B262C00605985 /* View */,
+				D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */,
 				AFD7CE3A2715C18300BCA025 /* AppDelegate.swift */,
 				D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */,
 				AFD7CE3C2715C18300BCA025 /* SceneDelegate.swift */,
@@ -210,12 +216,14 @@
 				D0A13CC42722233200C4B72F /* Register.swift in Sources */,
 				D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */,
 				AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */,
+				D0A13CC82722D90300C4B72F /* Serie.swift in Sources */,
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
 				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */,
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
 				38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */,
+				D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

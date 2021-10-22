@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         
-        if (emailTextField.text == "guilherme@teste.com.br" && senhaTextField.text == "Teste123@") {
+        if (emailTextField.text == "guilherme@nextflix.com.br" && senhaTextField.text == "Teste123@") {
 
           func prepare(for segue: UIStoryboardSegue, sender: Any?) {
               if segue.identifier == "showTabBar" {
