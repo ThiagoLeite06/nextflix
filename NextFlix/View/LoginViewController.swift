@@ -32,7 +32,14 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         
         if (emailTextField.text == "guilherme@teste.com.br" && senhaTextField.text == "Teste123@") {
-            performSegue(withIdentifier: "", sender: self)
+
+          func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+              if segue.identifier == "showTabBar" {
+                  if segue.destination is MoviesViewController {
+                      performSegue(withIdentifier: "showTabBar", sender: self)
+                  }
+              }
+            }
         }
         
         textFieldsVazio()
