@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="Y7w-1a-M5g"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Filmes" image="square.and.arrow.up" catalog="system" id="jgc-QU-Nzk"/>
+                    <tabBarItem key="tabBarItem" title="Filmes" image="cinema" id="jgc-QU-Nzk"/>
                     <connections>
                         <segue destination="ytt-X1-atA" kind="presentation" identifier="SegueFilmeDetailIdentifier" id="deX-Bu-bWe"/>
                     </connections>
@@ -170,7 +170,7 @@
                             <constraint firstItem="CAJ-ne-ubb" firstAttribute="leading" secondItem="W1w-GT-eD1" secondAttribute="leading" constant="20" id="w3i-N1-aLz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Séries" image="xmark.bin" catalog="system" id="uZc-oJ-zFb">
+                    <tabBarItem key="tabBarItem" title="Séries" image="clapboard" id="uZc-oJ-zFb">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
@@ -496,9 +496,9 @@
         <image name="Facebook" width="320" height="45"/>
         <image name="Gmail" width="320" height="45"/>
         <image name="banner-home" width="1920" height="600"/>
+        <image name="cinema" width="23" height="23"/>
+        <image name="clapboard" width="23" height="23"/>
         <image name="logo" width="500" height="500"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="xmark.bin" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
