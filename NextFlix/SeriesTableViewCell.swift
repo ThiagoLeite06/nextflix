@@ -11,8 +11,8 @@ class SeriesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var serieImageView: UIImageView!
     @IBOutlet weak var titleSerieLabel: UILabel!
-    @IBOutlet weak var bornInLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var releaseLabel: UILabel!
+    @IBOutlet weak var serieDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,11 +26,10 @@ class SeriesTableViewCell: UITableViewCell {
     }
     
     func setup(serie: Serie) {
-        
         serieImageView.image = UIImage (named: serie.imageSerie)
         titleSerieLabel.text = serie.titleSerie
-        bornInLabel.text = serie.bornIn
-        descriptionLabel.text = serie.description
+        releaseLabel.text = serie.bornIn
+        serieDescriptionLabel.text = serie.description
     }
 
 }

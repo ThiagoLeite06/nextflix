@@ -27,7 +27,9 @@ class SeriesViewController: UIViewController {
 }
 
 extension SeriesViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 195
+    }
 }
 
 extension SeriesViewController: UITableViewDataSource {
@@ -56,6 +58,8 @@ extension SeriesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return 215
     }
+    
+
 }
