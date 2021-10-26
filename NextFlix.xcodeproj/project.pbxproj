@@ -62,6 +62,7 @@
 		3863125B271F8CB5003D72FB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -71,15 +72,6 @@
 			children = (
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		38A496B2271F8BC70005B8C1 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */,
-				AFD7CE402715C18300BCA025 /* Main.storyboard */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		AF5FC40D271B261C00605985 /* Model */ = {
@@ -95,6 +87,8 @@
 		AF5FC40E271B262C00605985 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AFD7CE402715C18300BCA025 /* Main.storyboard */,
+				AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */,
 				38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */,
 				AFD7CE542716469100BCA025 /* MoviesViewController.swift */,
 				AFD7CE56271646A600BCA025 /* SeriesViewController.swift */,
@@ -126,12 +120,10 @@
 			children = (
 				3863125C271F8CD2003D72FB /* Service */,
 				3863125B271F8CB5003D72FB /* ViewModel */,
-				38A496B2271F8BC70005B8C1 /* Resource */,
 				AF5FC40D271B261C00605985 /* Model */,
 				AF5FC40E271B262C00605985 /* View */,
 				D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */,
 				AFD7CE3A2715C18300BCA025 /* AppDelegate.swift */,
-				D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */,
 				AFD7CE3C2715C18300BCA025 /* SceneDelegate.swift */,
 				AFD7CE432715C18500BCA025 /* Assets.xcassets */,
 				AFD7CE482715C18500BCA025 /* Info.plist */,

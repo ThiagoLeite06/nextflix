@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +15,39 @@
                     <view key="view" contentMode="scaleToFill" id="LvX-zo-p6V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="eFz-B9-Wi3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="LF6-1I-bFY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEM VINDO(a)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAQ-QZ-Zim">
+                                <rect key="frame" x="20" y="59" width="374" height="44"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="36"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filmes, séries e pessoas para descobrir. Explore já. " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLY-2I-RPo">
+                                <rect key="frame" x="20" y="143" width="374" height="58.5"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y7w-1a-M5g"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y7w-1a-M5g" firstAttribute="trailing" secondItem="eAQ-QZ-Zim" secondAttribute="trailing" constant="20" id="5oE-kO-7i0"/>
+                            <constraint firstItem="DLY-2I-RPo" firstAttribute="top" secondItem="eAQ-QZ-Zim" secondAttribute="bottom" constant="40" id="83M-zG-Bjh"/>
+                            <constraint firstItem="eFz-B9-Wi3" firstAttribute="top" secondItem="LvX-zo-p6V" secondAttribute="top" id="D7a-UO-TxG"/>
+                            <constraint firstItem="Y7w-1a-M5g" firstAttribute="trailing" secondItem="DLY-2I-RPo" secondAttribute="trailing" constant="20" id="K8I-ee-WiL"/>
+                            <constraint firstItem="eFz-B9-Wi3" firstAttribute="trailing" secondItem="Y7w-1a-M5g" secondAttribute="trailing" id="QOe-o7-wfY"/>
+                            <constraint firstItem="eAQ-QZ-Zim" firstAttribute="leading" secondItem="Y7w-1a-M5g" secondAttribute="leading" constant="20" id="Tp6-UD-25R"/>
+                            <constraint firstItem="DLY-2I-RPo" firstAttribute="leading" secondItem="Y7w-1a-M5g" secondAttribute="leading" constant="20" id="Xiu-ec-wWV"/>
+                            <constraint firstItem="eFz-B9-Wi3" firstAttribute="leading" secondItem="Y7w-1a-M5g" secondAttribute="leading" id="qyb-4E-6gc"/>
+                            <constraint firstItem="eAQ-QZ-Zim" firstAttribute="top" secondItem="Y7w-1a-M5g" secondAttribute="top" constant="15" id="uRb-C2-7Yk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Filmes" image="cinema" id="jgc-QU-Nzk"/>
                     <connections>
@@ -26,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C3-d6-41L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="377"/>
+            <point key="canvasLocation" x="908.69565217391312" y="376.33928571428572"/>
         </scene>
         <!--Titulo Selecionado View Controller-->
         <scene sceneID="0sM-dP-Gx4">
@@ -143,14 +173,14 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-tp-qGe">
                                 <rect key="frame" x="20" y="240" width="374" height="547"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="seriesTableViewCell" rowHeight="290" id="LK5-Rp-I1Z" customClass="SeriesTableViewCell" customModule="NextFlix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="290"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="seriesTableViewCell" rowHeight="216" id="LK5-Rp-I1Z" customClass="SeriesTableViewCell" customModule="NextFlix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LK5-Rp-I1Z" id="cVv-MG-FRz">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="290"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n04-wo-Yhs">
@@ -255,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFx-Vv-dYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="1258"/>
+            <point key="canvasLocation" x="908.69565217391312" y="1257.5892857142856"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wEx-wZ-JlH">
@@ -649,15 +679,10 @@
     <resources>
         <image name="Facebook" width="320" height="45"/>
         <image name="Gmail" width="320" height="45"/>
+        <image name="banner" width="390" height="256"/>
         <image name="banner-home" width="1920" height="600"/>
         <image name="cinema" width="23" height="23"/>
         <image name="clapboard" width="23" height="23"/>
         <image name="logo" width="378" height="377"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
