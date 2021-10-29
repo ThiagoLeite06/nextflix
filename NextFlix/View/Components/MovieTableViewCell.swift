@@ -12,6 +12,5 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var movieCollectionView: UICollectionView!
     @IBOutlet weak var sessionLbl: UILabel!
     
-    
 }
 

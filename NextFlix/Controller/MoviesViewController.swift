@@ -9,7 +9,6 @@ import UIKit
 
 class MoviesViewController: UIViewController {
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [Movie] = [
@@ -26,8 +25,6 @@ class MoviesViewController: UIViewController {
         tableView.dataSource = self
         
     }
-    
-    
 }
 extension MoviesViewController: UITableViewDelegate {
     
@@ -35,10 +32,14 @@ extension MoviesViewController: UITableViewDelegate {
 extension MoviesViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return 2
+
     }
     
+  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? MovieTableViewCell {
             cell.sessionLbl.text = "Mais procurados"
             
@@ -46,6 +47,7 @@ extension MoviesViewController: UITableViewDataSource{
             cell.movieCollectionView.dataSource = self
      
             return cell
+
         }
         
         return UITableViewCell()
@@ -63,7 +65,7 @@ extension MoviesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collection = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MovieCollectionViewCell
-        collection.setup(with: movies[indexPath.row])
+        collection.setup(movie: movies[indexPath.row])
         return collection
     }
     
@@ -73,4 +75,5 @@ extension MoviesViewController: UICollectionViewDataSource {
 extension MoviesViewController: UICollectionViewDelegate {
     
 }
+
 
