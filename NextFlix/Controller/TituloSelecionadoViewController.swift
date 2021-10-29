@@ -25,8 +25,8 @@ class TituloSelecionadoViewController: UIViewController {
     
     private func setup() {
         
-        tituloSelecionadoLabel.text = movie?.titleMovie
-        textoSinopseTextView.text = movie?.bornIn
+//        tituloSelecionadoLabel.text = movie?.titleMovie
+//        textoSinopseTextView.text = movie?.bornIn
 //        tituloSelecionadoLabel.text = movie?.original_title
 //        textoSinopseTextView.text = movie?.overview
         

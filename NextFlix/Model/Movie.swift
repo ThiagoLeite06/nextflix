@@ -8,18 +8,13 @@
 import Foundation
 import UIKit
 
-class Movie {
+struct Movie {
     
-    let imageMovie: String
-    let titleMovie: String
-    let bornIn: String
+    let imageMovie: UIImage
+    let title: String
+    let release: String
    
-    init (imageMovie: String, titleMovie: String, bornIn: String) {
-        
-        self.imageMovie = imageMovie
-        self.titleMovie = titleMovie
-        self.bornIn = bornIn
-    }
+    
 }
 
 
