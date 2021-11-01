@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */; };
+		AF51ACED27309F5400505521 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51ACEC27309F5400505521 /* Genre.swift */; };
+		AF51ACEF2730A1D400505521 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51ACEE2730A1D400505521 /* Company.swift */; };
 		AF5FC412271B26EA00605985 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5FC411271B26EA00605985 /* movies.json */; };
 		AF5FC414271B27B100605985 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC413271B27B100605985 /* Movie.swift */; };
 		AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE3A2715C18300BCA025 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloSelecionadoViewController.swift; sourceTree = "<group>"; };
+		AF51ACEC27309F5400505521 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		AF51ACEE2730A1D400505521 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		AF5FC411271B26EA00605985 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AF5FC413271B27B100605985 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		AFD7CE372715C18300BCA025 /* NextFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +88,8 @@
 				AF5FC413271B27B100605985 /* Movie.swift */,
 				D0A13CC32722233200C4B72F /* Register.swift */,
 				D0A13CC72722D90300C4B72F /* Serie.swift */,
+				AF51ACEC27309F5400505521 /* Genre.swift */,
+				AF51ACEE2730A1D400505521 /* Company.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,10 +239,12 @@
 				AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */,
 				D0A13CC82722D90300C4B72F /* Serie.swift in Sources */,
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
+				AF51ACED27309F5400505521 /* Genre.swift in Sources */,
 				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */,
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
+				AF51ACEF2730A1D400505521 /* Company.swift in Sources */,
 				38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */,
 				D004F3832727961E005BD194 /* MovieCollectionViewCell.swift in Sources */,
 				D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */,
