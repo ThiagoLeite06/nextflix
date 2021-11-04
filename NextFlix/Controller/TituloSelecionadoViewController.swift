@@ -14,23 +14,32 @@ class TituloSelecionadoViewController: UIViewController {
     @IBOutlet weak var textoSinopseTextView: UITextView!
     @IBOutlet weak var sinpseLabel: UILabel!
     @IBOutlet weak var elencoLabel: UILabel!
-   
+    @IBOutlet weak var elencoCollectionView: UICollectionView!
+    
     var movie: Movie?
+    var serie: Serie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-
+        setupMovie()
+//        setupSerie()
     }
     
-    private func setup() {
+    
+    
+    private func setupMovie() {
         
-//        tituloSelecionadoLabel.text = movie?.titleMovie
-//        textoSinopseTextView.text = movie?.bornIn
-//        tituloSelecionadoLabel.text = movie?.original_title
-//        textoSinopseTextView.text = movie?.overview
-        
+        tituloSelecionadoLabel.text = movie?.title
+        textoSinopseTextView.text = movie?.release
+        cartazImageView.image = movie?.imageMovie
     }
+    
+//    private func setupSerie() {
+//
+//        tituloSelecionadoLabel.text = serie?.titleSerie
+//        textoSinopseTextView.text = serie?.description
+//        cartazImageView.image = serie?.imageSerie
+//    }
 
 
 }

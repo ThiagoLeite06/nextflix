@@ -25,8 +25,14 @@ class MoviesViewController: UIViewController {
         tableView.dataSource = self
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let viewController = segue.destination as? TituloSelecionadoViewController {
+                viewController.movie = sender as? Movie
+            }
+    }
 }
 extension MoviesViewController: UITableViewDelegate {
+    
     
 }
 extension MoviesViewController: UITableViewDataSource{
@@ -73,7 +79,10 @@ extension MoviesViewController: UICollectionViewDataSource {
 }
 
 extension MoviesViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie = movies[indexPath.row]
+        performSegue(withIdentifier: "SegueFilmeDetailIdentifier", sender: movie)
+    }
 }
 
 
