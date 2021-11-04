@@ -26,7 +26,7 @@ class SeriesTableViewCell: UITableViewCell {
     }
     
     func setup(serie: Serie) {
-        serieImageView.image = UIImage (named: serie.imageSerie)
+        serieImageView.image = serie.imageSerie
         titleSerieLabel.text = serie.titleSerie
         releaseLabel.text = serie.bornIn
         serieDescriptionLabel.text = serie.description

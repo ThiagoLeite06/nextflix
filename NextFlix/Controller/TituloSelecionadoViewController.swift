@@ -21,17 +21,25 @@ class TituloSelecionadoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-
+        setupMovie()
+//        setupSerie()
     }
     
-    private func setup() {
+    
+    
+    private func setupMovie() {
         
         tituloSelecionadoLabel.text = movie?.title
         textoSinopseTextView.text = movie?.release
         cartazImageView.image = movie?.imageMovie
-        
     }
+    
+//    private func setupSerie() {
+//
+//        tituloSelecionadoLabel.text = serie?.titleSerie
+//        textoSinopseTextView.text = serie?.description
+//        cartazImageView.image = serie?.imageSerie
+//    }
 
 
 }
