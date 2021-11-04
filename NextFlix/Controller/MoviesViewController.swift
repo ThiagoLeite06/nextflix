@@ -11,15 +11,23 @@ class MoviesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var movies: [Movie] = []
-    var movies: Movie?
+    var movies: [Movie] = []
+    private let service = MovieService()
      
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        self.loadData()
         
+    }
+    
+    private func loadData() {
+        self.service.fetchData { item in
+            self.movies = item
+            print(self.movies)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
