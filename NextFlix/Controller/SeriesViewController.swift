@@ -24,12 +24,23 @@ class SeriesViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let viewController = segue.destination as? TituloSelecionadoViewController {
+                viewController.serie = sender as? Serie
+            }
+    }
 }
 
 extension SeriesViewController: UITableViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Clicou")
+        let serie = series[indexPath.row]
+        performSegue(withIdentifier: "SegueDetailIdentifier", sender: serie)
+    }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 195
     }
+
 }
 
 extension SeriesViewController: UITableViewDataSource {
