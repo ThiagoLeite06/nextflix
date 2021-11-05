@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C3FC455B2A787D3AC8C24EF /* Pods_NextFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D4A0EBD32D7907A4649B1 /* Pods_NextFlix.framework */; };
+		380755832734D4DB00BA52C5 /* SerieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380755822734D4DB00BA52C5 /* SerieService.swift */; };
+		380755862734D7D600BA52C5 /* SerieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380755852734D7D600BA52C5 /* SerieResponse.swift */; };
 		38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */; };
 		38AFA60327332C600059D795 /* ElencoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AFA60227332C600059D795 /* ElencoCollectionViewCell.swift */; };
 		38AFA60627332E8B0059D795 /* Elenco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AFA60527332E8B0059D795 /* Elenco.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		1266C7DF9FBB551BDD65EE55 /* Pods-NextFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextFlix.debug.xcconfig"; path = "Target Support Files/Pods-NextFlix/Pods-NextFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		380755822734D4DB00BA52C5 /* SerieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieService.swift; sourceTree = "<group>"; };
+		380755852734D7D600BA52C5 /* SerieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieResponse.swift; sourceTree = "<group>"; };
 		38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloSelecionadoViewController.swift; sourceTree = "<group>"; };
 		38AFA60227332C600059D795 /* ElencoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElencoCollectionViewCell.swift; sourceTree = "<group>"; };
 		38AFA60527332E8B0059D795 /* Elenco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elenco.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCC927827345EE900FFB496 /* MovieService.swift */,
+				380755822734D4DB00BA52C5 /* SerieService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -103,7 +108,6 @@
 				1266C7DF9FBB551BDD65EE55 /* Pods-NextFlix.debug.xcconfig */,
 				7FC4FF92D5A29DD28197ADF4 /* Pods-NextFlix.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,6 +128,7 @@
 				AF51ACEE2730A1D400505521 /* Company.swift */,
 				38AFA60527332E8B0059D795 /* Elenco.swift */,
 				AFCC927C2734AE3400FFB496 /* MovieResponse.swift */,
+				380755852734D7D600BA52C5 /* SerieResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				AFCC927927345EE900FFB496 /* MovieService.swift in Sources */,
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
 				38AFA60327332C600059D795 /* ElencoCollectionViewCell.swift in Sources */,
+				380755832734D4DB00BA52C5 /* SerieService.swift in Sources */,
 				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				AFCC927B27346B1300FFB496 /* MovieViewModel.swift in Sources */,
@@ -334,6 +340,7 @@
 				D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */,
 				38AFA60627332E8B0059D795 /* Elenco.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
+				380755862734D7D600BA52C5 /* SerieResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

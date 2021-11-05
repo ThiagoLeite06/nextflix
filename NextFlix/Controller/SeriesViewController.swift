@@ -11,18 +11,25 @@ class SeriesViewController: UIViewController {
     
     @IBOutlet weak var serieTableView: UITableView!
     
-    var series: [Serie] = 
-    [
-        .init(imageSerie: #imageLiteral(resourceName: "whatif"), titleSerie: "What If", bornIn: "11 de agosto de 2021", description: "Imagina o que teria acontecido aos super-heróis se a história fosse totalmente diferente e se passasse em outra realidade"),
-        .init(imageSerie: #imageLiteral(resourceName: "theoffice"), titleSerie: "The Office", bornIn: "24 de março de 2005", description: "É uma comédia que gira em torno do cotidiano de um escritório. Esta sátira descreve a vida dos funcionários da fábrica de papel Dunder Miffin, situada em Scranton, na Pensilvânia."),
-        .init(imageSerie: #imageLiteral(resourceName: "got"), titleSerie: "Game of Thrones", bornIn: "17 de abril de 2011", description: "A  série centra-se no Trono de Ferro dos Sete Reinos e segue um enredo de alianças e conflitos entre as famílias nobres dinásticas, seja competindo para reivindicar o trono ou lutando por sua independência."),
-        .init(imageSerie: #imageLiteral(resourceName: "round6"), titleSerie: "Round 6", bornIn: "17 de setembro de 2021", description: "Um grupo de 456 pessoas, endividadas e desesperadas, são atraídas para participar de um sangrento jogo de sobrevivência no qual elas têm a chance de sair com o equivalente a US$ 39 milhões - se vencerem uma série de seis desafios."),
-        .init(imageSerie: #imageLiteral(resourceName: "ummaluconopedaco"), titleSerie: "Um Maluco no Pedaço", bornIn: "10 de setembro de 1990", description: "Conta a história de Will (Will Smith), um jovem de origem humilde que se muda para um luxuoso bairro na Califórnia. Will vive se comportando de maneira inadequada e provocando trapalhadas aos seus tios e primos na mansão. ")
-    ]
+    var series: [Serie] = []
+    
+    private let service = SerieService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        self.loadData()
+        self.serieTableView.reloadData()
+        
+    }
+    
+    private func loadData() {
+        self.service.loadSeries{ items in
+            self.series = items
+            DispatchQueue.main.async {
+                self.serieTableView.reloadData()
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
