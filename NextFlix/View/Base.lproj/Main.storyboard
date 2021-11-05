@@ -176,49 +176,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwy-4S-R6w">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
-=======
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwy-4S-R6w">
-                                <rect key="frame" x="0.0" y="44" width="414" height="288"/>
->>>>>>> 60033fa449ca8735cb0a4f32da96477626bfcccf
                                 <constraints>
                                     <constraint firstAttribute="height" constant="315" id="Zq8-Xt-58m"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddC-L4-a7d">
-<<<<<<< HEAD
                                 <rect key="frame" x="16" y="378" width="66.5" height="25"/>
-=======
-                                <rect key="frame" x="16" y="385" width="66.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="JYT-zg-ih6"/>
-                                </constraints>
->>>>>>> 60033fa449ca8735cb0a4f32da96477626bfcccf
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" red="0.85882352939999995" green="0.24313725489999999" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elenco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbM-ip-ktk">
-<<<<<<< HEAD
                                 <rect key="frame" x="16" y="585" width="56.5" height="25"/>
-=======
-                                <rect key="frame" x="16" y="588" width="56.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="n7G-na-Caq"/>
-                                </constraints>
->>>>>>> 60033fa449ca8735cb0a4f32da96477626bfcccf
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" red="0.85882352939999995" green="0.24313725489999999" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bfg-rT-QX8">
-<<<<<<< HEAD
                                 <rect key="frame" x="16" y="419" width="382" height="150"/>
-=======
-                                <rect key="frame" x="16" y="422" width="382" height="150"/>
->>>>>>> 60033fa449ca8735cb0a4f32da96477626bfcccf
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="cIR-Es-WyM"/>
@@ -229,24 +206,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toY-xx-k7i">
-<<<<<<< HEAD
                                 <rect key="frame" x="16" y="337" width="382" height="25"/>
-=======
-                                <rect key="frame" x="16" y="348" width="382" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="z39-oU-DqH"/>
-                                </constraints>
->>>>>>> 60033fa449ca8735cb0a4f32da96477626bfcccf
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-jM-49N">
-<<<<<<< HEAD
                                 <rect key="frame" x="16" y="626" width="382" height="236"/>
-=======
-                                <rect key="frame" x="16" y="625" width="382" height="221"/>
->>>>>>> 60033fa449ca8735cb0a4f32da96477626bfcccf
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nq6-8J-Itw">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="212"/>
@@ -855,7 +821,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tOU-yn-Ium"/>
+        <segue reference="deX-Bu-bWe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="390" height="256"/>
