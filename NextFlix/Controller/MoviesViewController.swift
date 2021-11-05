@@ -24,9 +24,12 @@ class MoviesViewController: UIViewController {
     }
     
     private func loadData() {
-        self.service.fetchData { item in
-            self.movies = item
-            print(self.movies)
+        self.service.fetchData { items in
+            self.movies = items
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
         }
     }
     
@@ -56,7 +59,7 @@ extension MoviesViewController: UITableViewDataSource{
             
             cell.movieCollectionView.delegate = self
             cell.movieCollectionView.dataSource = self
-     
+            
             return cell
 
         }

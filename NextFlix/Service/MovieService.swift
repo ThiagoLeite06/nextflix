@@ -25,8 +25,8 @@ class MovieService: ServiceProtocol {
             guard let result = data else { return }
             
             do {
-                let movie = try JSONDecoder().decode([Movie].self, from: result)
-                completion(movie)
+                let response = try JSONDecoder().decode(MovieResponse.self, from: result)
+                completion(response.results)
             } catch {
                 print("JSON error: \(error.localizedDescription)")
             }
