@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Serie: Codable {
-    let poster_path: String?
+    let poster_path: String
     let popularity: Double
     let id: Double
     let backdrop_path: String?

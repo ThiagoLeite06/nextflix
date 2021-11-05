@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SeriesTableViewCell: UITableViewCell {
     
@@ -26,10 +27,11 @@ class SeriesTableViewCell: UITableViewCell {
     }
     
     func setup(serie: Serie) {
-//        serieImageView.image = serie.imageSerie
-//        titleSerieLabel.text = serie.titleSerie
-//        releaseLabel.text = serie.bornIn
-//        serieDescriptionLabel.text = serie.description
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(serie.poster_path)")!
+        self.serieImageView.kf.setImage(with:url)
+        titleSerieLabel.text = serie.name
+        serieDescriptionLabel.text = serie.overview
+        releaseLabel.text = serie.first_air_date
     }
 
 }
