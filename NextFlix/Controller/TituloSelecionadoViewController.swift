@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TituloSelecionadoViewController: UIViewController {
 
@@ -25,12 +26,19 @@ class TituloSelecionadoViewController: UIViewController {
 //        setupSerie()
     }
     
+    @IBAction func closeButton(_ sender: Any) {
+        self.dismiss(animated: true) {
+            print("fechou")
+        }
+    }
     
     
     private func setupMovie() {
-        tituloSelecionadoLabel.text = movie?.title
-        textoSinopseTextView.text = movie?.overview
-        cartazImageView.image = UIImage(named: movie!.poster_path)
+//        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie?.poster_path)")
+//        self.cartazImageView.kf.setImage(with:url)
+        self.tituloSelecionadoLabel.text = movie?.title
+        self.textoSinopseTextView.text = movie?.overview
+      
     }
     
 //    private func setupSerie() {

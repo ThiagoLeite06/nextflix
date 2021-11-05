@@ -17,10 +17,12 @@ class MoviesViewController: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         self.loadData()
+
+        self.tableView.reloadData()    
+
     }
     
     private func loadData() {
@@ -61,9 +63,7 @@ extension MoviesViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return 2
-
+        return 1
     }
     
   
