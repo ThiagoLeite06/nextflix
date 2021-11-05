@@ -28,10 +28,9 @@ class TituloSelecionadoViewController: UIViewController {
     
     
     private func setupMovie() {
-        
         tituloSelecionadoLabel.text = movie?.title
-        textoSinopseTextView.text = movie?.release
-        cartazImageView.image = movie?.imageMovie
+        textoSinopseTextView.text = movie?.overview
+        cartazImageView.image = UIImage(named: movie!.poster_path)
     }
     
 //    private func setupSerie() {

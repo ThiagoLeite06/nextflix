@@ -11,20 +11,28 @@ class MoviesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var movies: [Movie] = [
-        .init(imageMovie: #imageLiteral(resourceName: "thelordofthering"), title: "The Lord of the Rings - The Return of the King", release: "25 de dezembro de 2003"),
-        .init(imageMovie: #imageLiteral(resourceName: "clubedaluta") , title: "Clube da Luta", release: "29 de outubro de 1999"),
-        .init(imageMovie: #imageLiteral(resourceName: "devoltaparafuturo") , title: "De Volta para o Futuro", release: "25 de dezembro de 1985"),
-        .init(imageMovie: #imageLiteral(resourceName: "matrix") , title: "Matrix", release: "21 de maio de 1999")
-    ]
-    
+    var movies: [Movie] = []
+    private let service = MovieService()
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        self.loadData()
         
     }
+    
+    private func loadData() {
+        self.service.fetchData { items in
+            self.movies = items
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let viewController = segue.destination as? TituloSelecionadoViewController {
                 viewController.movie = sender as? Movie
@@ -51,7 +59,7 @@ extension MoviesViewController: UITableViewDataSource{
             
             cell.movieCollectionView.delegate = self
             cell.movieCollectionView.dataSource = self
-     
+            
             return cell
 
         }
