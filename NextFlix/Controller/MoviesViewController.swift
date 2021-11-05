@@ -12,6 +12,7 @@ class MoviesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [Movie] = []
+    var titleSection = ["Os mais Populares","Tendências"]
     private let service = MovieService()
      
     override func viewDidLoad() {
@@ -20,7 +21,6 @@ class MoviesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.loadData()
-        
     }
     
     private func loadData() {
@@ -44,6 +44,21 @@ extension MoviesViewController: UITableViewDelegate {
     
 }
 extension MoviesViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(red: 0.86, green: 0.24, blue: 0.69, alpha: 1.00)
+        header.textLabel?.backgroundColor = UIColor.black
+        header.textLabel?.font = UIFont(name: "Verdana", size: 14)!
+    }
+        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return titleSection.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return titleSection[section]
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
