@@ -12,7 +12,7 @@ class MoviesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [Movie] = []
-//    var titleSection = ["Os mais Populares","Tendências"]
+    
     private let service = MovieService()
      
     override func viewDidLoad() {
@@ -24,6 +24,12 @@ class MoviesViewController: UIViewController {
         self.tableView.reloadData()    
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+
     
     private func loadData() {
         self.service.fetchData { items in

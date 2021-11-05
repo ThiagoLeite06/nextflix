@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func logarButton(_ sender: Any) {
         
-        if (emailTextField.text == "guilherme@nextflix.com.br" && senhaTextField.text == "Teste@123") {
+        if (emailTextField.text == "admin@nextflix.com.br" && senhaTextField.text == "Teste@123") {
             
             performSegue(withIdentifier: "showTabBar", sender: self)
             
