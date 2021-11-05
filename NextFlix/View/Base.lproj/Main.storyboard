@@ -171,19 +171,19 @@
         <!--Titulo Selecionado View Controller-->
         <scene sceneID="0sM-dP-Gx4">
             <objects>
-                <viewController id="ytt-X1-atA" customClass="TituloSelecionadoViewController" customModule="NextFlix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ytt-X1-atA" customClass="TituloSelecionadoViewController" customModule="NextFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvv-6i-c73">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwy-4S-R6w">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="288"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwy-4S-R6w">
+                                <rect key="frame" x="0.0" y="44" width="414" height="288"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="288" id="SeU-cf-s6T"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddC-L4-a7d">
-                                <rect key="frame" x="16" y="341" width="66.5" height="21"/>
+                                <rect key="frame" x="16" y="385" width="66.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="JYT-zg-ih6"/>
                                 </constraints>
@@ -192,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elenco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbM-ip-ktk">
-                                <rect key="frame" x="16" y="544" width="56.5" height="21"/>
+                                <rect key="frame" x="16" y="588" width="56.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="n7G-na-Caq"/>
                                 </constraints>
@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bfg-rT-QX8">
-                                <rect key="frame" x="16" y="378" width="382" height="150"/>
+                                <rect key="frame" x="16" y="422" width="382" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="00o-u6-WH3"/>
@@ -212,7 +212,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toY-xx-k7i">
-                                <rect key="frame" x="16" y="304" width="382" height="21"/>
+                                <rect key="frame" x="16" y="348" width="382" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="z39-oU-DqH"/>
                                 </constraints>
@@ -221,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-jM-49N">
-                                <rect key="frame" x="16" y="581" width="382" height="211"/>
+                                <rect key="frame" x="16" y="625" width="382" height="221"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nq6-8J-Itw">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="212"/>
@@ -813,7 +813,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="deX-Bu-bWe"/>
+        <segue reference="tOU-yn-Ium"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="390" height="256"/>
