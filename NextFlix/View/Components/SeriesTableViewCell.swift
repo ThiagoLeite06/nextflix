@@ -26,10 +26,10 @@ class SeriesTableViewCell: UITableViewCell {
     }
     
     func setup(serie: Serie) {
-        serieImageView.image = serie.imageSerie
-        titleSerieLabel.text = serie.titleSerie
-        releaseLabel.text = serie.bornIn
-        serieDescriptionLabel.text = serie.description
+//        serieImageView.image = serie.imageSerie
+//        titleSerieLabel.text = serie.titleSerie
+//        releaseLabel.text = serie.bornIn
+//        serieDescriptionLabel.text = serie.description
     }
 
 }

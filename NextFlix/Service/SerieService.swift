@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-class SerieService {
+protocol ServiceProtocolSerie {
+    func fetchData(completion: @escaping ([Serie]) -> Void)
+}
+
+class SerieService: ServiceProtocolSerie {
     
     
     let url_base = "https://api.themoviedb.org/3"
@@ -21,7 +25,7 @@ class SerieService {
             guard let result = data else { return }
             
             do {
-                let response = try JSONDecoder().decode(MovieResponse.self, from: result)
+                let response = try JSONDecoder().decode(SerieResponse.self, from: result)
                 completion(response.results)
             } catch {
                 print("JSON error: \(error.localizedDescription)")
@@ -32,4 +36,4 @@ class SerieService {
     }
    
 }
-}
+

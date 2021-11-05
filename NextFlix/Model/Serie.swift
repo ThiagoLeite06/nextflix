@@ -29,9 +29,9 @@ struct Serie: Codable {
 //    let description: String
 }
 
-struct Genre: Codable {
-    let id: Int
-}
+//struct Genre: Codable {
+//    let id: Int
+//}
 struct Country: Codable {
     let country: String
 }
