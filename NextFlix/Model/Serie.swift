@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 struct Serie: Codable {
     let poster_path: String
@@ -34,4 +35,14 @@ struct Serie: Codable {
 //}
 struct Country: Codable {
     let country: String
+}
+
+extension Serie: Content {
+    var title: String {
+        return name
+    }
+    
+    var cover: URL? {
+        return URL(string: "https://image.tmdb.org/t/p/w500" + (backdrop_path ?? ""))
+    }
 }

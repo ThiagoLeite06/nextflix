@@ -35,4 +35,8 @@ struct Genre: Codable {
     let name: String
 }
 
-
+extension Movie: Content {
+    var cover: URL? {
+        return URL(string: "https://image.tmdb.org/t/p/w500" + backdrop_path)
+    }
+}

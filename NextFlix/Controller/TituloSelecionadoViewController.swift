@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SwiftUI
 
 class TituloSelecionadoViewController: UIViewController {
 
@@ -17,13 +18,11 @@ class TituloSelecionadoViewController: UIViewController {
     @IBOutlet weak var elencoLabel: UILabel!
     @IBOutlet weak var elencoCollectionView: UICollectionView!
     
-    var movie: Movie?
-    var serie: Serie?
+    var content: Content?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMovie()
-        setupSerie()
+        setupContent()
     }
         
     @IBAction func closeButton(_ sender: Any) {
@@ -33,19 +32,13 @@ class TituloSelecionadoViewController: UIViewController {
     }
     
     
-    private func setupMovie() {
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie?.poster_path)")
-        self.cartazImageView.kf.setImage(with:url)
-        self.tituloSelecionadoLabel.text = movie?.title
-        self.textoSinopseTextView.text = movie?.overview
+    private func setupContent() {
+        guard let content = content else {
+            return
+        }
+
+        self.cartazImageView.kf.setImage(with:content.cover, placeholder: UIImage(named: "semImagem"))
+        self.tituloSelecionadoLabel.text = content.title
+        self.textoSinopseTextView.text = content.overview
     }
-    
-    private func setupSerie() {
-
-        tituloSelecionadoLabel.text = serie?.name
-        textoSinopseTextView.text = serie?.overview
-//        cartazImageView.image = serie?.poster_path
-    }
-
-
 }

@@ -29,6 +29,7 @@
 		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
 		D004F38127279561005BD194 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004F38027279561005BD194 /* MovieTableViewCell.swift */; };
 		D004F3832727961E005BD194 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004F3822727961E005BD194 /* MovieCollectionViewCell.swift */; };
+		D012272927360910003A91C0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012272827360910003A91C0 /* Content.swift */; };
 		D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBD272219A800C4B72F /* LoginViewController.swift */; };
 		D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */; };
 		D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */; };
@@ -64,6 +65,7 @@
 		BD3D4A0EBD32D7907A4649B1 /* Pods_NextFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D004F38027279561005BD194 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D004F3822727961E005BD194 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		D012272827360910003A91C0 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D0A13CBD272219A800C4B72F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
 		D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		AFD7CE392715C18300BCA025 /* NextFlix */ = {
 			isa = PBXGroup;
 			children = (
+				D0122727273608F5003A91C0 /* Protocols */,
 				AF5FC40D271B261C00605985 /* Model */,
 				D004F37F2727952C005BD194 /* Controller */,
 				3863125C271F8CD2003D72FB /* Service */,
@@ -200,6 +203,14 @@
 				D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0122727273608F5003A91C0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D012272827360910003A91C0 /* Content.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
 				38AFA60327332C600059D795 /* ElencoCollectionViewCell.swift in Sources */,
 				380755832734D4DB00BA52C5 /* SerieService.swift in Sources */,
+				D012272927360910003A91C0 /* Content.swift in Sources */,
 				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				AFCC927B27346B1300FFB496 /* MovieViewModel.swift in Sources */,
