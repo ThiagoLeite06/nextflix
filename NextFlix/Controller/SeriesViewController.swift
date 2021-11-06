@@ -20,18 +20,12 @@ class SeriesViewController: UIViewController {
         configTableView()
         self.loadData()
         self.serieTableView.reloadData()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.serieTableView.reloadData()
     }
     
     private func loadData() {
         self.service.loadSeries{ items in
-            self.series = items
             DispatchQueue.main.async {
+                self.series = items
                 self.serieTableView.reloadData()
             }
         }
@@ -40,7 +34,7 @@ class SeriesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueDetailIdentifier" {
             if let viewController = segue.destination as? TituloSelecionadoViewController {
-                viewController.serie = sender as? Serie
+                viewController.content = sender as? Serie
             }
         }
     }

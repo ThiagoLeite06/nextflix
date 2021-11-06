@@ -34,7 +34,7 @@ class MoviesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let viewController = segue.destination as? TituloSelecionadoViewController {
-                viewController.movie = sender as? Movie
+                viewController.content = sender as? Movie
             }
     }
 }
