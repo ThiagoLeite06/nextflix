@@ -38,9 +38,7 @@ class SeriesViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "SegueDetailIdentifier" {
-            
             if let viewController = segue.destination as? TituloSelecionadoViewController {
                 viewController.serie = sender as? Serie
             }

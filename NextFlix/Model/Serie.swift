@@ -12,7 +12,7 @@ struct Serie: Codable {
     let poster_path: String
     let popularity: Double
     let id: Double
-    let backdrop_path: String?
+    let backdrop_path: String
     let vote_average: Double
     let overview: String
     let first_air_date: String

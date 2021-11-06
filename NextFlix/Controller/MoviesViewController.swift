@@ -20,24 +20,15 @@ class MoviesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.loadData()
-
-        self.tableView.reloadData()    
-
+  
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
-        self.tableView.reloadData()
-    }
-
-    
+        
     private func loadData() {
         self.service.fetchData { items in
-            self.movies = items
             DispatchQueue.main.async {
+                self.movies = items
                 self.tableView.reloadData()
             }
-            
         }
     }
     
@@ -66,10 +57,10 @@ extension MoviesViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? MovieTableViewCell {
-//            cell.sessionLbl.text = "Mais procurados"
             cell.setup()
             cell.movieCollectionView.delegate = self
             cell.movieCollectionView.dataSource = self
+            cell.movieCollectionView.reloadData()
             cell.contentView.backgroundColor = UIColor.black
             return cell
 

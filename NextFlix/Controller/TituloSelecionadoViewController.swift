@@ -22,8 +22,13 @@ class TituloSelecionadoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMovie()
-        setupSerie()
+        
+        if movie == nil {
+            setupSerie()
+        } else {
+            setupMovie()
+        }
+        
     }
         
     @IBAction func closeButton(_ sender: Any) {
@@ -34,17 +39,18 @@ class TituloSelecionadoViewController: UIViewController {
     
     
     private func setupMovie() {
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie?.poster_path)")
+        let url = URL(string: "https://image.tmdb.org/t/p/w500" + movie!.backdrop_path)
         self.cartazImageView.kf.setImage(with:url)
         self.tituloSelecionadoLabel.text = movie?.title
         self.textoSinopseTextView.text = movie?.overview
     }
     
     private func setupSerie() {
-
-        tituloSelecionadoLabel.text = serie?.name
-        textoSinopseTextView.text = serie?.overview
-//        cartazImageView.image = serie?.poster_path
+        let url = URL(string: "https://image.tmdb.org/t/p/w500" + serie!.backdrop_path)
+        self.cartazImageView.kf.setImage(with:url)
+        self.tituloSelecionadoLabel.text = serie?.name
+        self.textoSinopseTextView.text = serie?.overview
+        
     }
 
 
