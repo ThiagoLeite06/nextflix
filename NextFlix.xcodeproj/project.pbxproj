@@ -36,6 +36,7 @@
 		D0A13CC42722233200C4B72F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC32722233200C4B72F /* Register.swift */; };
 		D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */; };
 		D0A13CC82722D90300C4B72F /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC72722D90300C4B72F /* Serie.swift */; };
+		D0E9D86927383BD600F29ABA /* SerieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9D86827383BD600F29ABA /* SerieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		D0A13CC32722233200C4B72F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		D0A13CC72722D90300C4B72F /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		D0E9D86827383BD600F29ABA /* SerieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */,
 				AFCC927A27346B1300FFB496 /* MovieViewModel.swift */,
+				D0E9D86827383BD600F29ABA /* SerieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				D004F3832727961E005BD194 /* MovieCollectionViewCell.swift in Sources */,
 				D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */,
 				38AFA60627332E8B0059D795 /* Elenco.swift in Sources */,
+				D0E9D86927383BD600F29ABA /* SerieViewModel.swift in Sources */,
 				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
 				380755862734D7D600BA52C5 /* SerieResponse.swift in Sources */,
 			);
