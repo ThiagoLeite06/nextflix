@@ -23,16 +23,9 @@ struct Serie: Codable {
     let vote_count: Int
     let name: String
     let original_name: String
-    
-//    let imageSerie: UIImage
-//    let titleSerie: String
-//    let bornIn: String
-//    let description: String
 }
 
-//struct Genre: Codable {
-//    let id: Int
-//}
+
 struct Country: Codable {
     let country: String
 }
