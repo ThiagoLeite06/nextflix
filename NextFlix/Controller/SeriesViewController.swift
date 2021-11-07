@@ -72,7 +72,7 @@ extension SeriesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 215
+        return 120
     }
 }
 
