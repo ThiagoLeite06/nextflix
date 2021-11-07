@@ -13,23 +13,16 @@ class SeriesViewController: UIViewController {
     
     var series: [Serie] = []
     
-    private let service = SerieService()
+    private let seriesViewModel = SerieViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
         self.loadData()
         self.serieTableView.reloadData()
+        seriesViewModel.delegate = self
     }
     
-    private func loadData() {
-        self.service.loadSeries{ items in
-            DispatchQueue.main.async {
-                self.series = items
-                self.serieTableView.reloadData()
-            }
-        }
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueDetailIdentifier" {
@@ -80,5 +73,16 @@ extension SeriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 215
+    }
+}
+
+extension SeriesViewController: SerieViewModelDelegate {
+    func loadData() {
+        self.seriesViewModel.service.loadSeries{ items in
+            DispatchQueue.main.async {
+                self.series = items
+                self.serieTableView.reloadData()
+            }
+        }
     }
 }
