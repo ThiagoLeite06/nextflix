@@ -43,11 +43,11 @@ extension MoviesViewController: UITableViewDelegate {
 }
 extension MoviesViewController: UITableViewDataSource{
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.backgroundColor = UIColor.black
-        header.textLabel?.font = UIFont(name: "Verdana", size: 14)!
-    }
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        let header = view as! UITableViewHeaderFooterView
+////        header.textLabel?.backgroundColor = UIColor.black
+////        header.textLabel?.font = UIFont(name: "Verdana", size: 14)!
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -57,7 +57,6 @@ extension MoviesViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? MovieTableViewCell {
-            cell.setup()
             cell.movieCollectionView.delegate = self
             cell.movieCollectionView.dataSource = self
             cell.movieCollectionView.reloadData()
