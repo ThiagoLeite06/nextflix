@@ -12,7 +12,7 @@ import SwiftUI
 struct Serie: Codable {
     let poster_path: String
     let popularity: Double
-    let id: Double
+    let id: Int
     let backdrop_path: String?
     let vote_average: Double
     let overview: String

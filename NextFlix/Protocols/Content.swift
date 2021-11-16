@@ -11,4 +11,5 @@ protocol Content {
     var title: String {get}
     var cover: URL? {get}
     var overview: String {get}
+    var id: Int{get}
 }
