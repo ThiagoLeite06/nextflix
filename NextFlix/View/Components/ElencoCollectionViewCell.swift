@@ -15,7 +15,7 @@ class ElencoCollectionViewCell: UICollectionViewCell {
     
     func setup(elenco: Cast) {
         self.nomeElencoLabel.text = elenco.name
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(elenco.profile_path)")!
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(String(describing: elenco.profile_path))")!
         self.imagemElenco.kf.setImage(with:url)
     }
 }
