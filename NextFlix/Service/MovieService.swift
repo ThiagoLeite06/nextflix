@@ -34,5 +34,22 @@ class MovieService: ServiceProtocol {
         
         task.resume()
     }
+    
+    func fetchCast(movieId: Int, completion: @escaping ([Cast]) -> Void) {
+        let session = URLSession.shared
+        let url = URL(string: "\(self.url_base)/movie/\(movieId)/credits?api_key=\(self.api_key)&language=pt-BR")!
+        let task = session.dataTask(with: url) { data, response, error in
+            guard let result = data else { return }
+            
+            do {
+                let response = try JSONDecoder().decode(CastResponse.self, from: result)
+                completion(response.cast)
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+            }
+        }
+        
+        task.resume()
+    }
    
 }
