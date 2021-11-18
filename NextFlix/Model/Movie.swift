@@ -21,7 +21,7 @@ struct Movie: Codable {
     let release_date: String
     let title: String
     let video: Bool
-    let vote_average: Float
+    let vote_average: Double
     let vote_count: Int
     
 //    let imageMovie: UIImage
@@ -36,7 +36,7 @@ struct Genre: Codable {
 }
 
 extension Movie: Content {
-    var cover: URL? {
+   var cover: URL? {
         return URL(string: "https://image.tmdb.org/t/p/w500" + backdrop_path)
     }
 }

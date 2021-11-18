@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ElencoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imagemElenco: UIImageView!
     @IBOutlet weak var nomeElencoLabel: UILabel!
     
-    func setup(elenco: Elenco) {
-        self.nomeElencoLabel.text = elenco.nome
-       // self.imagemElenco.image = elenco.im
+    func setup(elenco: Cast) {
+        self.nomeElencoLabel.text = elenco.name
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(String(describing: elenco.profile_path))")!
+        self.imagemElenco.kf.setImage(with:url)
     }
 }

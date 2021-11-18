@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Elenco {
-    let nome: String
-    let imagem: String
+struct Cast: Codable {
+    let name: String
+    let profile_path: String?
 }
