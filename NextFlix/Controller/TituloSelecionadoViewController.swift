@@ -10,10 +10,11 @@ import Kingfisher
 import SwiftUI
 
 class TituloSelecionadoViewController: UIViewController {
-
+    
     private let movieService = MovieService()
     private var cast: [Cast] = []
-    
+
+    @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var cartazImageView: UIImageView!
     @IBOutlet weak var tituloSelecionadoLabel: UILabel!
     @IBOutlet weak var textoSinopseTextView: UITextView!
@@ -27,6 +28,8 @@ class TituloSelecionadoViewController: UIViewController {
         super.viewDidLoad()
         setupContent()
         loadCast()
+//        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
+//        let favorite = content?.convertToFavorite()
     }
         
     @IBAction func closeButton(_ sender: Any) {

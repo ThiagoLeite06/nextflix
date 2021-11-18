@@ -31,7 +31,7 @@ struct Country: Codable {
 }
 
 extension Serie: Content {
-    var title: String {
+   var title: String {
         return name
     }
     
