@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "902CC164-B61E-46D5-9461-805171CBB31D"
+   uuid = "4D331174-052F-4A78-913D-167DACB9958A"
    type = "0"
    version = "2.0">
-<<<<<<< HEAD
-=======
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "69806177-A175-4DA0-8179-D092595D2ED6"
+            uuid = "8CFD1227-02FA-464D-AC53-9DCB4B18E291"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NextFlix/Controller/SeriesViewController.swift"
+            filePath = "NextFlix/ViewModel/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "loadData()"
-            landmarkType = "9">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "MovieViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
->>>>>>> 82a5d60e7449c8479386d7aa4861127010c5c29d
 </Bucket>

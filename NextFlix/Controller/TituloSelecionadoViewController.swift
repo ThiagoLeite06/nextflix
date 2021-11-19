@@ -13,25 +13,41 @@ class TituloSelecionadoViewController: UIViewController {
     
     private let movieService = MovieService()
     private var cast: [Cast] = []
+    
+    var content: Content?
 
-    @IBOutlet weak var favButton: UIButton!
+    let viewModel = SerieViewModel()
+    
     @IBOutlet weak var cartazImageView: UIImageView!
     @IBOutlet weak var tituloSelecionadoLabel: UILabel!
     @IBOutlet weak var textoSinopseTextView: UITextView!
     @IBOutlet weak var sinpseLabel: UILabel!
     @IBOutlet weak var elencoLabel: UILabel!
     @IBOutlet weak var elencoCollectionView: UICollectionView!
-    
-    var content: Content?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupContent()
         loadCast()
+        
+        viewModel.delegate = self
+        viewModel.loadData()
+        
 //        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
 //        let favorite = content?.convertToFavorite()
     }
+    
+    
+    @IBAction func favButton(_ sender: Any) {
         
+        guard let content = content else {
+            return
+        }
+
+        viewModel.addFavorite(title: content.title, poster_path: content.poster_path, vote_average: content.vote_average)
+        
+    }
+    
     @IBAction func closeButton(_ sender: Any) {
         self.dismiss(animated: true) {
             print("fechou")
@@ -62,6 +78,23 @@ class TituloSelecionadoViewController: UIViewController {
     }
 }
 
+extension TituloSelecionadoViewController: SerieViewModelDelegate {
+    func loadData() {
+        //
+    }
+
+    func errorAddFavorite() {
+        //
+    }
+
+    func reloadData() {
+        //
+    }
+
+
+}
+
+
 extension TituloSelecionadoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cast.count
@@ -77,3 +110,5 @@ extension TituloSelecionadoViewController: UICollectionViewDataSource {
     
     
 }
+
+

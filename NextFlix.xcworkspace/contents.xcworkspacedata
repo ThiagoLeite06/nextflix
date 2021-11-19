@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Favorites+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/guifeitosa/Documents/Guilherme Feitosa/Cursos/DH - Desenvolvimento Mobile IOS/Projeto Integrador/nextflix/NextFlix/Model/Favorites+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:NextFlix.xcodeproj">
    </FileRef>
    <FileRef

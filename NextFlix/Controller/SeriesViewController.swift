@@ -77,6 +77,14 @@ extension SeriesViewController: UITableViewDataSource {
 }
 
 extension SeriesViewController: SerieViewModelDelegate {
+    func errorAddFavorite() {
+        //
+    }
+    
+    func reloadData() {
+        //
+    }
+    
     func loadData() {
         self.seriesViewModel.service.loadSeries{ items in
             DispatchQueue.main.async {

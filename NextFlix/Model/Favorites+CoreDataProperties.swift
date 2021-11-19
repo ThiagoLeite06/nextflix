@@ -2,7 +2,7 @@
 //  Favorites+CoreDataProperties.swift
 //  
 //
-//  Created by Thiago Leite on 17/11/21.
+//  Created by Gui Feitosa on 18/11/21.
 //
 //
 
@@ -16,9 +16,8 @@ extension Favorites {
         return NSFetchRequest<Favorites>(entityName: "Favorites")
     }
 
-    @NSManaged public var poster_path: String?
-    @NSManaged public var title: String?
     @NSManaged public var vote_average: Double
+    @NSManaged public var title: String?
+    @NSManaged public var poster_path: String?
 
 }
-
