@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
     
-    private let viewModel = FavoritesViewModel()
+    private let viewModel = FavoriteViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     

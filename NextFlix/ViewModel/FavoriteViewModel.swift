@@ -12,7 +12,7 @@ protocol FavoriteViewModelDelegate {
     
 }
 
-class FavoritesViewModel {
+class FavoriteViewModel {
     
     // Titulo Seção
     //var titleSection = ["Filmes", "Séries"]
