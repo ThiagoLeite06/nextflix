@@ -94,7 +94,6 @@ extension TituloSelecionadoViewController: SerieViewModelDelegate {
 
 }
 
-
 extension TituloSelecionadoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cast.count
@@ -102,6 +101,7 @@ extension TituloSelecionadoViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ElencoCollectionViewCell", for: indexPath) as? ElencoCollectionViewCell {
+            
             cell.setup(elenco: cast[indexPath.row])
             return cell
         }
