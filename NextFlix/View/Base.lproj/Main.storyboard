@@ -219,9 +219,12 @@
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="heart" title=" ">
+                                                <buttonConfiguration key="configuration" style="plain" image="star" title=" ">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="favButton:" destination="ytt-X1-atA" eventType="touchUpInside" id="v43-RO-05x"/>
+                                                </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-jM-49N">
                                                 <rect key="frame" x="20" y="615" width="374" height="230"/>
@@ -344,7 +347,6 @@
                         <outlet property="cartazImageView" destination="vwy-4S-R6w" id="itg-W5-LRa"/>
                         <outlet property="elencoCollectionView" destination="Nq6-8J-Itw" id="Wte-sg-rQ9"/>
                         <outlet property="elencoLabel" destination="SbM-ip-ktk" id="0Hr-JQ-Drm"/>
-                        <outlet property="favButton" destination="WY6-qb-FA8" id="1wz-As-Yxb"/>
                         <outlet property="sinpseLabel" destination="ddC-L4-a7d" id="Iwj-KR-ZOv"/>
                         <outlet property="textoSinopseTextView" destination="Bfg-rT-QX8" id="6vp-FI-D1G"/>
                         <outlet property="tituloSelecionadoLabel" destination="toY-xx-k7i" id="mje-Ki-Uxb"/>
@@ -379,7 +381,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAJ-ne-ubb">
                                 <rect key="frame" x="20" y="183" width="78.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
-                                <color key="textColor" red="0.85882352941176465" green="0.24313725490196078" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.24313725489999999" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-tp-qGe">
@@ -488,33 +490,35 @@
                                 <rect key="frame" x="0.0" y="123" width="414" height="690"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="d8J-hu-0mX" customClass="FavoritesTableViewCell" customModule="NextFlix" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritesTableViewCell" rowHeight="160" id="d8J-hu-0mX" customClass="FavoritesTableViewCell" customModule="NextFlix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d8J-hu-0mX" id="crN-kE-Aas">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwX-6C-zts">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vwX-6C-zts">
                                                     <rect key="frame" x="0.0" y="0.0" width="141" height="135"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="141" id="iDe-eQ-4UH"/>
                                                         <constraint firstAttribute="height" constant="135" id="m7m-GS-Uq1"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqo-fN-UqH">
-                                                    <rect key="frame" x="149" y="11" width="42" height="35"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqo-fN-UqH">
+                                                    <rect key="frame" x="145" y="11" width="41.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="UOF-3C-a2A"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="vwX-6C-zts" firstAttribute="leading" secondItem="crN-kE-Aas" secondAttribute="leading" id="1KP-hS-aKH"/>
                                                 <constraint firstItem="eqo-fN-UqH" firstAttribute="top" secondItem="crN-kE-Aas" secondAttribute="topMargin" id="7bf-4c-uqq"/>
-                                                <constraint firstItem="eqo-fN-UqH" firstAttribute="leading" secondItem="vwX-6C-zts" secondAttribute="trailing" constant="16" id="tvO-oB-3kX"/>
+                                                <constraint firstItem="eqo-fN-UqH" firstAttribute="leading" secondItem="vwX-6C-zts" secondAttribute="trailing" constant="4" id="tvO-oB-3kX"/>
                                                 <constraint firstItem="vwX-6C-zts" firstAttribute="top" secondItem="crN-kE-Aas" secondAttribute="top" id="xTg-mM-MhX"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -916,7 +920,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tOU-yn-Ium"/>
+        <segue reference="deX-Bu-bWe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Facebook" width="320" height="45"/>
@@ -926,7 +930,6 @@
         <image name="cinema" width="23" height="23"/>
         <image name="clapboard" width="23" height="23"/>
         <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="heart" width="30" height="30"/>
         <image name="logo" width="378" height="377"/>
         <image name="star" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">

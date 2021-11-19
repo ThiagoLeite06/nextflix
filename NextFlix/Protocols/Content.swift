@@ -17,14 +17,14 @@ protocol Content {
     var vote_average: Double {get}
 }
 
-extension Content {
-    func convertToFavorite() -> Favorites {
-        let favorite = Favorites()
-        favorite.poster_path = poster_path
-        favorite.title = title
-        favorite.vote_average = vote_average
-        
-        return favorite
-    }
+//extension Content {
+//    func convertToFavorite() -> Favorites {
+//        let favorite = Favorites()
+//        favorite.poster_path = poster_path
+//        favorite.title = title
+//        favorite.vote_average = vote_average
+//
+//        return favorite
+//    }
     
-}
+//}
