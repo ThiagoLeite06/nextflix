@@ -30,6 +30,9 @@ class TituloSelecionadoViewController: UIViewController {
         setupContent()
         loadCast()
         
+        elencoCollectionView.dataSource = self
+        elencoCollectionView.delegate = self
+        
         viewModel.delegate = self
         viewModel.loadData()
         
@@ -100,15 +103,16 @@ extension TituloSelecionadoViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ElencoCollectionViewCell", for: indexPath) as? ElencoCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "elencoCollectionViewCell", for: indexPath) as? ElencoCollectionViewCell {
             
             cell.setup(elenco: cast[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
     }
-    
-    
 }
 
+extension TituloSelecionadoViewController: UICollectionViewDelegate {
+    
+}
 
