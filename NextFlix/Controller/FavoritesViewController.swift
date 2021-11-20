@@ -18,9 +18,13 @@ class FavoritesViewController: UIViewController {
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         viewModel.delegate = self
-        viewModel.loadData()
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.loadData()
     }
 }
 extension FavoritesViewController: FavoriteViewModelDelegate {
