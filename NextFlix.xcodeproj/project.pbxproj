@@ -87,7 +87,7 @@
 		D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		D0A13CC72722D90300C4B72F /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		D0D437202746FBFC00FF3ACD /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
-		D0D437222747307F00FF3ACD /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "/Users/guifeitosa/Documents/Guilherme Feitosa/Cursos/DH - Desenvolvimento Mobile IOS/Projeto Integrador/nextflix/NextFlix/Model/Favorites+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		D0D437222747307F00FF3ACD /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "../../../../../guifeitosa/Documents/Guilherme Feitosa/Cursos/DH - Desenvolvimento Mobile IOS/Projeto Integrador/nextflix/NextFlix/Model/Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D0D437242747308100FF3ACD /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataClass.swift"; path = "../../Favorites+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D0E9D86827383BD600F29ABA /* SerieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
