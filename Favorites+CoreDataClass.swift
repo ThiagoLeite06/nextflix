@@ -2,7 +2,7 @@
 //  Favorites+CoreDataClass.swift
 //  
 //
-//  Created by Gui Feitosa on 18/11/21.
+//  Created by Thiago Almeida Leite on 22/11/21.
 //
 //
 

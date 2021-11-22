@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C3FC455B2A787D3AC8C24EF /* Pods_NextFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D4A0EBD32D7907A4649B1 /* Pods_NextFlix.framework */; };
+		377CAB36274BCDC20009C636 /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CAB35274BCDC20009C636 /* Favorites+CoreDataClass.swift */; };
+		377CAB38274BCDC50009C636 /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CAB37274BCDC50009C636 /* Favorites+CoreDataProperties.swift */; };
 		380755832734D4DB00BA52C5 /* SerieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380755822734D4DB00BA52C5 /* SerieService.swift */; };
 		380755862734D7D600BA52C5 /* SerieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380755852734D7D600BA52C5 /* SerieResponse.swift */; };
 		384798CE2744663400D931D2 /* CastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384798CD2744663400D931D2 /* CastResponse.swift */; };
@@ -42,13 +44,13 @@
 		D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */; };
 		D0A13CC82722D90300C4B72F /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC72722D90300C4B72F /* Serie.swift */; };
 		D0D437212746FBFC00FF3ACD /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D437202746FBFC00FF3ACD /* CoreDataService.swift */; };
-		D0D437232747307F00FF3ACD /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D437222747307F00FF3ACD /* Favorites+CoreDataProperties.swift */; };
-		D0D437252747308100FF3ACD /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D437242747308100FF3ACD /* Favorites+CoreDataClass.swift */; };
 		D0E9D86927383BD600F29ABA /* SerieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9D86827383BD600F29ABA /* SerieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1266C7DF9FBB551BDD65EE55 /* Pods-NextFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextFlix.debug.xcconfig"; path = "Target Support Files/Pods-NextFlix/Pods-NextFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		377CAB35274BCDC20009C636 /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataClass.swift"; path = "../../Favorites+CoreDataClass.swift"; sourceTree = "<group>"; };
+		377CAB37274BCDC50009C636 /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "../../Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		380755822734D4DB00BA52C5 /* SerieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieService.swift; sourceTree = "<group>"; };
 		380755852734D7D600BA52C5 /* SerieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieResponse.swift; sourceTree = "<group>"; };
 		384798CD2744663400D931D2 /* CastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastResponse.swift; sourceTree = "<group>"; };
@@ -87,8 +89,6 @@
 		D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		D0A13CC72722D90300C4B72F /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		D0D437202746FBFC00FF3ACD /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
-		D0D437222747307F00FF3ACD /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "../../../../../guifeitosa/Documents/Guilherme Feitosa/Cursos/DH - Desenvolvimento Mobile IOS/Projeto Integrador/nextflix/NextFlix/Model/Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D0D437242747308100FF3ACD /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataClass.swift"; path = "../../Favorites+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D0E9D86827383BD600F29ABA /* SerieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,8 +145,8 @@
 		AF5FC40D271B261C00605985 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D0D437222747307F00FF3ACD /* Favorites+CoreDataProperties.swift */,
-				D0D437242747308100FF3ACD /* Favorites+CoreDataClass.swift */,
+				377CAB35274BCDC20009C636 /* Favorites+CoreDataClass.swift */,
+				377CAB37274BCDC50009C636 /* Favorites+CoreDataProperties.swift */,
 				AF5FC413271B27B100605985 /* Movie.swift */,
 				D0A13CC32722233200C4B72F /* Register.swift */,
 				D0A13CC72722D90300C4B72F /* Serie.swift */,
@@ -372,7 +372,6 @@
 				D004F38127279561005BD194 /* MovieTableViewCell.swift in Sources */,
 				D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */,
 				AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */,
-				D0D437252747308100FF3ACD /* Favorites+CoreDataClass.swift in Sources */,
 				D0A13CC82722D90300C4B72F /* Serie.swift in Sources */,
 				AFCC927927345EE900FFB496 /* MovieService.swift in Sources */,
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,
@@ -380,6 +379,7 @@
 				AF9C13742745DB8A00607287 /* FavoritesTableViewCell.swift in Sources */,
 				380755832734D4DB00BA52C5 /* SerieService.swift in Sources */,
 				D012272927360910003A91C0 /* Content.swift in Sources */,
+				377CAB36274BCDC20009C636 /* Favorites+CoreDataClass.swift in Sources */,
 				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AF9C13722745D8FA00607287 /* FavoriteViewModel.swift in Sources */,
 				D0D437212746FBFC00FF3ACD /* CoreDataService.swift in Sources */,
@@ -388,8 +388,8 @@
 				D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */,
 				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
 				AF9C13622745BA2700607287 /* Favorites.xcdatamodeld in Sources */,
-				D0D437232747307F00FF3ACD /* Favorites+CoreDataProperties.swift in Sources */,
 				AF51ACEF2730A1D400505521 /* Company.swift in Sources */,
+				377CAB38274BCDC50009C636 /* Favorites+CoreDataProperties.swift in Sources */,
 				38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */,
 				D004F3832727961E005BD194 /* MovieCollectionViewCell.swift in Sources */,
 				D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */,

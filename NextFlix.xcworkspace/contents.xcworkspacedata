@@ -5,7 +5,7 @@
       location = "group:Favorites+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:/Users/guifeitosa/Documents/Guilherme Feitosa/Cursos/DH - Desenvolvimento Mobile IOS/Projeto Integrador/nextflix/NextFlix/Model/Favorites+CoreDataProperties.swift">
+      location = "group:Favorites+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:NextFlix.xcodeproj">
