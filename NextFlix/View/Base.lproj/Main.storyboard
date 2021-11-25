@@ -171,8 +171,10 @@
                                                     <constraint firstAttribute="height" constant="30" id="CZW-gk-ddQ"/>
                                                     <constraint firstAttribute="width" constant="30" id="y2u-ar-Y3c"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.25490196079999999" green="0.71372549019999998" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="clear" catalog="system"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="x.circle.fill" catalog="system">
+                                                    <color key="titleColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="closeButton:" destination="ytt-X1-atA" eventType="touchUpInside" id="34C-nI-R4M"/>
                                                 </connections>
@@ -910,8 +912,8 @@
         <image name="banner-home" width="1920" height="600"/>
         <image name="cinema" width="23" height="23"/>
         <image name="clapboard" width="23" height="23"/>
-        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="logo" width="378" height="377"/>
         <image name="star" width="20" height="20"/>
+        <image name="x.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
