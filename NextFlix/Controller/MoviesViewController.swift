@@ -22,6 +22,8 @@ class MoviesViewController: UIViewController {
         self.loadData()
   
     }
+    
+    
         
     private func loadData() {
         self.service.fetchData { items in

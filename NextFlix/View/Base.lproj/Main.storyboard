@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4V-Qi-A4K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rH0-AG-356">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -136,6 +137,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Filmes" image="cinema" id="jgc-QU-Nzk"/>
+                    <navigationItem key="navigationItem" id="DWI-zR-Wqe"/>
                     <connections>
                         <outlet property="tableView" destination="Vam-FN-pAc" id="iKG-OR-hYA"/>
                         <segue destination="ytt-X1-atA" kind="presentation" identifier="SegueFilmeDetailIdentifier" id="deX-Bu-bWe"/>
@@ -595,26 +597,6 @@
                                     <segue destination="hV9-4K-n9J" kind="show" identifier="RegisterDetail" id="ZkM-Iz-qzM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL5-7o-Y1N">
-                                <rect key="frame" x="35" y="582.5" width="344" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="kYG-df-0w1"/>
-                                </constraints>
-                                <state key="normal" image="Gmail"/>
-                                <connections>
-                                    <action selector="loginGmailButton:" destination="rH0-AG-356" eventType="touchUpInside" id="JaZ-DH-t9u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-J3-MZP">
-                                <rect key="frame" x="35" y="643.5" width="344" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Bj8-2u-lf8"/>
-                                </constraints>
-                                <state key="normal" image="Facebook"/>
-                                <connections>
-                                    <action selector="loginFacebookButton:" destination="rH0-AG-356" eventType="touchUpInside" id="Cmp-wo-ZRa"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJs-bM-bCS">
                                 <rect key="frame" x="35" y="262" width="344" height="20"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
@@ -691,12 +673,18 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL4-5T-FiM" customClass="GIDSignInButton">
+                                <rect key="frame" x="35" y="586.5" width="344" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C8P-cY-ojh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="11Z-1B-Epn"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D8H-6D-VLX" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="46" id="09i-uQ-V7D"/>
-                            <constraint firstItem="GL5-7o-Y1N" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="192-NY-tVQ"/>
                             <constraint firstItem="oPc-vK-A8b" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="5Nj-Ut-WgF"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="6ee-La-9Vb"/>
                             <constraint firstItem="AOK-Q2-fWH" firstAttribute="top" secondItem="RKk-Vg-j3e" secondAttribute="bottom" constant="12" id="7d2-6Z-27b"/>
@@ -704,7 +692,6 @@
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="D8H-6D-VLX" secondAttribute="trailing" constant="46" id="9tW-tl-Ogc"/>
                             <constraint firstItem="AOK-Q2-fWH" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="APC-57-nJt"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="gJs-bM-bCS" secondAttribute="trailing" constant="35" id="Bn0-vM-L1w"/>
-                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="GL5-7o-Y1N" secondAttribute="trailing" constant="35" id="C9d-tE-W8D"/>
                             <constraint firstItem="jSG-vS-BIc" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="D1N-Zj-sgM"/>
                             <constraint firstItem="gJs-bM-bCS" firstAttribute="top" secondItem="x88-dL-cOX" secondAttribute="bottom" constant="22" id="Glu-aR-YiL"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="jSG-vS-BIc" secondAttribute="trailing" constant="35" id="IDp-zi-aeC"/>
@@ -712,7 +699,8 @@
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="RKk-Vg-j3e" secondAttribute="trailing" constant="35" id="JXM-97-y2j"/>
                             <constraint firstItem="D8H-6D-VLX" firstAttribute="top" secondItem="11Z-1B-Epn" secondAttribute="top" constant="10" id="L87-zv-dDC"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="NC6-rA-Brw"/>
-                            <constraint firstItem="GL5-7o-Y1N" firstAttribute="top" secondItem="jSG-vS-BIc" secondAttribute="bottom" constant="16" id="Vcp-bO-s1T"/>
+                            <constraint firstItem="ZL4-5T-FiM" firstAttribute="top" secondItem="jSG-vS-BIc" secondAttribute="bottom" constant="20" id="Tjq-3Y-lWw"/>
+                            <constraint firstItem="ZL4-5T-FiM" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="Vy5-c4-2TU"/>
                             <constraint firstItem="gJs-bM-bCS" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="WBH-Ks-mCy"/>
                             <constraint firstItem="WCi-pp-gad" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="ag4-jv-kz2"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="top" secondItem="gJs-bM-bCS" secondAttribute="bottom" constant="8" id="bas-Ij-csT"/>
@@ -723,14 +711,12 @@
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="lLv-R2-s0y" secondAttribute="trailing" constant="35" id="g2Y-Mr-3nw"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="AOK-Q2-fWH" secondAttribute="trailing" constant="35" id="jZA-yH-NiT"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="WCi-pp-gad" secondAttribute="trailing" constant="35" id="jeP-Fh-de2"/>
-                            <constraint firstItem="Rfm-J3-MZP" firstAttribute="top" secondItem="GL5-7o-Y1N" secondAttribute="bottom" constant="16" id="k7c-11-8aT"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="x88-dL-cOX" secondAttribute="trailing" constant="35" id="omc-Ro-K3X"/>
                             <constraint firstItem="oPc-vK-A8b" firstAttribute="top" secondItem="lLv-R2-s0y" secondAttribute="bottom" constant="10" id="rUl-5A-UQN"/>
                             <constraint firstItem="WCi-pp-gad" firstAttribute="top" secondItem="oPc-vK-A8b" secondAttribute="bottom" constant="8" id="rl5-5G-2q9"/>
-                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="Rfm-J3-MZP" secondAttribute="trailing" constant="35" id="rr9-rt-AvB"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="oPc-vK-A8b" secondAttribute="trailing" constant="35" id="x7c-iQ-knL"/>
+                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="ZL4-5T-FiM" secondAttribute="trailing" constant="35" id="xmf-7T-x2Q"/>
                             <constraint firstItem="x88-dL-cOX" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="yyp-Ey-oFC"/>
-                            <constraint firstItem="Rfm-J3-MZP" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="zEt-eQ-Jb9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5qg-ae-CiC"/>
@@ -741,11 +727,12 @@
                         <outlet property="logoUIImage" destination="D8H-6D-VLX" id="3rO-cy-qi7"/>
                         <outlet property="senhaLabel" destination="oPc-vK-A8b" id="wPO-gH-uLo"/>
                         <outlet property="senhaTextField" destination="WCi-pp-gad" id="n8L-K9-jcI"/>
+                        <outlet property="signInButton" destination="ZL4-5T-FiM" id="tiA-RK-xGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f46-Xh-ieP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1113" y="457"/>
+            <point key="canvasLocation" x="-1113.0434782608697" y="456.69642857142856"/>
         </scene>
         <!--Register Screen View Controller-->
         <scene sceneID="hKw-Jb-zym">
@@ -863,7 +850,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vUk-TW-OH9">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e4V-Qi-A4K" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overCurrentContext" id="e4V-Qi-A4K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nv4-lY-PVI"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backgroundImage="star" id="ZiO-px-APk">
@@ -906,8 +893,6 @@
         <segue reference="deX-Bu-bWe"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Facebook" width="320" height="45"/>
-        <image name="Gmail" width="320" height="45"/>
         <image name="banner" width="390" height="256"/>
         <image name="banner-home" width="1920" height="600"/>
         <image name="cinema" width="23" height="23"/>
@@ -915,5 +900,8 @@
         <image name="logo" width="378" height="377"/>
         <image name="star" width="20" height="20"/>
         <image name="x.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

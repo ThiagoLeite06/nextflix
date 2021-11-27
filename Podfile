@@ -7,4 +7,7 @@ target 'NextFlix' do
 
   # Pods for NextFlix
   pod 'Kingfisher', '~> 7.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn', '~> 5.0'
 end
