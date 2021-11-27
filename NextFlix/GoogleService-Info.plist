@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>472171980065-6qihsuk3gts4mfcgk64cm2dmoai1vp8t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.472171980065-6qihsuk3gts4mfcgk64cm2dmoai1vp8t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBy27BtwYxHB0iz9QMA2ZuUgm09VFqAgws</string>
+	<key>GCM_SENDER_ID</key>
+	<string>472171980065</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.thiago-leite.NextFlix</string>
+	<key>PROJECT_ID</key>
+	<string>nextflix-3c961</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nextflix-3c961.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:472171980065:ios:67a69309d7e7a5c2154a60</string>
+</dict>
+</plist>

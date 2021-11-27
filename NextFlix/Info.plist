@@ -10,11 +10,22 @@
 			<string>0</string>
 		</dict>
 	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.472171980065-6qihsuk3gts4mfcgk64cm2dmoai1vp8t</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
-		<key>UIApplicationSupportsTabbedSceneCollection</key>
-		<false/>
 		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UIApplicationSupportsTabbedSceneCollection</key>
 		<false/>
 		<key>UISceneConfigurations</key>
 		<dict>

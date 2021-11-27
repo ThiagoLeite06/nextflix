@@ -23,6 +23,7 @@
 		AF9C13642745BEF000607287 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C13632745BEF000607287 /* FavoritesViewController.swift */; };
 		AF9C13722745D8FA00607287 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C13712745D8FA00607287 /* FavoriteViewModel.swift */; };
 		AF9C13742745DB8A00607287 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C13732745DB8A00607287 /* FavoritesTableViewCell.swift */; };
+		AFBC3E42275198FB005CCC4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFBC3E41275198FB005CCC4D /* GoogleService-Info.plist */; };
 		AFCC927927345EE900FFB496 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC927827345EE900FFB496 /* MovieService.swift */; };
 		AFCC927B27346B1300FFB496 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC927A27346B1300FFB496 /* MovieViewModel.swift */; };
 		AFCC927D2734AE3400FFB496 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC927C2734AE3400FFB496 /* MovieResponse.swift */; };
@@ -65,6 +66,7 @@
 		AF9C13632745BEF000607287 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		AF9C13712745D8FA00607287 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		AF9C13732745DB8A00607287 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		AFBC3E41275198FB005CCC4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFCC927827345EE900FFB496 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		AFCC927A27346B1300FFB496 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		AFCC927C2734AE3400FFB496 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				AFD7CE3C2715C18300BCA025 /* SceneDelegate.swift */,
 				AFD7CE432715C18500BCA025 /* Assets.xcassets */,
 				AFD7CE482715C18500BCA025 /* Info.plist */,
+				AFBC3E41275198FB005CCC4D /* GoogleService-Info.plist */,
 				AF5FC411271B26EA00605985 /* movies.json */,
 			);
 			path = NextFlix;
@@ -260,6 +263,7 @@
 				AFD7CE342715C18300BCA025 /* Frameworks */,
 				AFD7CE352715C18300BCA025 /* Resources */,
 				05994C9104C27FC52AE0F572 /* [CP] Embed Pods Frameworks */,
+				8FBB640E25D7D649C3D7AA40 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +314,7 @@
 			files = (
 				AFD7CE472715C18500BCA025 /* LaunchScreen.storyboard in Resources */,
 				AFD7CE442715C18500BCA025 /* Assets.xcassets in Resources */,
+				AFBC3E42275198FB005CCC4D /* GoogleService-Info.plist in Resources */,
 				AF5FC412271B26EA00605985 /* movies.json in Resources */,
 				AFD7CE422715C18300BCA025 /* Main.storyboard in Resources */,
 			);
@@ -333,6 +338,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NextFlix/Pods-NextFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FBB640E25D7D649C3D7AA40 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextFlix/Pods-NextFlix-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextFlix/Pods-NextFlix-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NextFlix/Pods-NextFlix-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DEED34D48905816C95FAE410 /* [CP] Check Pods Manifest.lock */ = {

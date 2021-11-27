@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
 class LoginViewController: UIViewController {
     
     private let registerScreen = RegisterScreenViewController()
+    
+    @IBOutlet var signInButton: GIDSignInButton!
     
     @IBOutlet weak var logoUIImage: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
@@ -21,7 +25,45 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        GIDSignIn.sharedInstance().presentingViewController =  self
+        GIDSignIn.sharedInstance().delegate = self
+        
+        if isUserLogged() {
+            logOut()
+        }
+    }
+    
+    
+    
+    func getUserData() {
+        let firebaseAuth = Auth.auth()
+        let user = firebaseAuth.currentUser
+        
+        guard let user = user else { return }
+        print("Informações do usuário")
+        print("nome: \(String(describing: user.displayName))")
+        print("email: \(String(describing: user.email))")
+    }
+    
+    func isUserLogged() -> Bool {
+        let firebaseAuth = Auth.auth()
+        let user = firebaseAuth.currentUser
+        
+        if user != nil {
+            getUserData()
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func logOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Erro ao fazer logout")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -137,4 +179,24 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginFacebookButton(_ sender: Any) {
     }
+}
+
+extension LoginViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        guard
+            let authentication = user.authentication,
+            let idToken = authentication.idToken else { return }
+        
+        let credential = GoogleAuthProvider.credential(
+            withIDToken: idToken,
+            accessToken: authentication.accessToken)
+        
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error { return }
+            self.getUserData()
+            self.performSegue(withIdentifier: "showTabBar", sender: nil)
+        }
+    }
+    
+    
 }
