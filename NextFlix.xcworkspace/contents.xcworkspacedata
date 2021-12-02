@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Favorites+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Favorites+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:NextFlix.xcodeproj">
    </FileRef>
    <FileRef

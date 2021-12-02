@@ -36,6 +36,13 @@ class TituloSelecionadoViewController: UIViewController {
         viewModel.delegate = self
         viewModel.loadData()
         
+        let isSerie = content is Serie
+        if isSerie {
+            print("isso é uma série")
+        } else {
+            print("isso é um filme")
+        }
+        
 //        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
 //        let favorite = content?.convertToFavorite()
     }
