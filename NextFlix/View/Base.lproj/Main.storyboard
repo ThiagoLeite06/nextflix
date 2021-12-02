@@ -674,10 +674,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL4-5T-FiM" customClass="GIDSignInButton">
-                                <rect key="frame" x="35" y="586.5" width="344" height="50"/>
+                                <rect key="frame" x="32" y="586.5" width="337" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="C8P-cY-ojh"/>
+                                    <constraint firstAttribute="height" constant="40" id="C8P-cY-ojh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="loginGmailButton:" destination="rH0-AG-356" eventType="valueChanged" id="8VI-lh-Dk5"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV4-kB-SOg" customClass="FBLoginButton">
+                                <rect key="frame" x="35" y="646.5" width="344" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hje-aJ-UK4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -685,9 +695,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D8H-6D-VLX" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="46" id="09i-uQ-V7D"/>
+                            <constraint firstItem="ZL4-5T-FiM" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="32" id="3EJ-9o-iOe"/>
                             <constraint firstItem="oPc-vK-A8b" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="5Nj-Ut-WgF"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="6ee-La-9Vb"/>
                             <constraint firstItem="AOK-Q2-fWH" firstAttribute="top" secondItem="RKk-Vg-j3e" secondAttribute="bottom" constant="12" id="7d2-6Z-27b"/>
+                            <constraint firstItem="wV4-kB-SOg" firstAttribute="top" secondItem="ZL4-5T-FiM" secondAttribute="bottom" constant="20" id="7fG-bw-uXS"/>
                             <constraint firstItem="RKk-Vg-j3e" firstAttribute="top" secondItem="WCi-pp-gad" secondAttribute="bottom" constant="22" id="7l7-Lt-SRZ"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="D8H-6D-VLX" secondAttribute="trailing" constant="46" id="9tW-tl-Ogc"/>
                             <constraint firstItem="AOK-Q2-fWH" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="APC-57-nJt"/>
@@ -700,7 +712,6 @@
                             <constraint firstItem="D8H-6D-VLX" firstAttribute="top" secondItem="11Z-1B-Epn" secondAttribute="top" constant="10" id="L87-zv-dDC"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="NC6-rA-Brw"/>
                             <constraint firstItem="ZL4-5T-FiM" firstAttribute="top" secondItem="jSG-vS-BIc" secondAttribute="bottom" constant="20" id="Tjq-3Y-lWw"/>
-                            <constraint firstItem="ZL4-5T-FiM" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="Vy5-c4-2TU"/>
                             <constraint firstItem="gJs-bM-bCS" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="WBH-Ks-mCy"/>
                             <constraint firstItem="WCi-pp-gad" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="ag4-jv-kz2"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="top" secondItem="gJs-bM-bCS" secondAttribute="bottom" constant="8" id="bas-Ij-csT"/>
@@ -708,14 +719,16 @@
                             <constraint firstItem="jSG-vS-BIc" firstAttribute="top" secondItem="AOK-Q2-fWH" secondAttribute="bottom" constant="16" id="btk-2X-htr"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="top" secondItem="gJs-bM-bCS" secondAttribute="bottom" constant="8" id="cHX-07-8RI"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="lLv-R2-s0y" secondAttribute="trailing" constant="35" id="dVh-Fw-4K0"/>
+                            <constraint firstItem="wV4-kB-SOg" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="eRd-sI-L4o"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="lLv-R2-s0y" secondAttribute="trailing" constant="35" id="g2Y-Mr-3nw"/>
+                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="ZL4-5T-FiM" secondAttribute="trailing" constant="45" id="ggH-6w-YoI"/>
+                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="wV4-kB-SOg" secondAttribute="trailing" constant="35" id="h08-cY-L9e"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="AOK-Q2-fWH" secondAttribute="trailing" constant="35" id="jZA-yH-NiT"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="WCi-pp-gad" secondAttribute="trailing" constant="35" id="jeP-Fh-de2"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="x88-dL-cOX" secondAttribute="trailing" constant="35" id="omc-Ro-K3X"/>
                             <constraint firstItem="oPc-vK-A8b" firstAttribute="top" secondItem="lLv-R2-s0y" secondAttribute="bottom" constant="10" id="rUl-5A-UQN"/>
                             <constraint firstItem="WCi-pp-gad" firstAttribute="top" secondItem="oPc-vK-A8b" secondAttribute="bottom" constant="8" id="rl5-5G-2q9"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="oPc-vK-A8b" secondAttribute="trailing" constant="35" id="x7c-iQ-knL"/>
-                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="ZL4-5T-FiM" secondAttribute="trailing" constant="35" id="xmf-7T-x2Q"/>
                             <constraint firstItem="x88-dL-cOX" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="yyp-Ey-oFC"/>
                         </constraints>
                     </view>
@@ -728,6 +741,7 @@
                         <outlet property="senhaLabel" destination="oPc-vK-A8b" id="wPO-gH-uLo"/>
                         <outlet property="senhaTextField" destination="WCi-pp-gad" id="n8L-K9-jcI"/>
                         <outlet property="signInButton" destination="ZL4-5T-FiM" id="tiA-RK-xGH"/>
+                        <outlet property="signInFbButtonContainer" destination="wV4-kB-SOg" id="2Ad-eU-Qdj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f46-Xh-ieP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

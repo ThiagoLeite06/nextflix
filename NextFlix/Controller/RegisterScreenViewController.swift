@@ -32,9 +32,9 @@ class RegisterScreenViewController: UIViewController {
     }
     
     @IBAction private func voltarButton(_ sender: Any) {
-        navigationController?.viewControllers.popLast()
+        //navigationController?.viewControllers.popLast()
         
-//        dismiss(animated: true)
+       dismiss(animated: true)
     }
     
 }
