@@ -4,6 +4,22 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
   - Firebase/Auth (8.9.1):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.9.0)
@@ -109,6 +125,8 @@ PODS:
   - PromisesObjC (2.0.0)
 
 DEPENDENCIES:
+  - FacebookCore
+  - FacebookLogin
   - Firebase/Auth
   - Firebase/Core
   - GoogleSignIn (~> 5.0)
@@ -117,6 +135,10 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AppAuth
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -135,6 +157,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
   FirebaseAnalytics: 4ab446ce08a3fe52e8a4303dd997cf26276bf968
   FirebaseAuth: 2b78b2a32c07b3ecfa4970bdf1d3632b8304099b
@@ -151,6 +177,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 744ddcdee66f858948c3bbf76a81c4e087c98010
+PODFILE CHECKSUM: 8f9cc058337c12b66e28b301887576604802a8d4
 
 COCOAPODS: 1.11.2

@@ -42,5 +42,44 @@
 			</array>
 		</dict>
 	</dict>
+    
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb421393419636522</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>421393419636522</string>
+    <key>FacebookClientToken</key>
+    <string>970fe98fd56484abd58422f9d30174fd</string>
+    <key>FacebookDisplayName</key>
+    <string>NextFlix</string>
+    
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fbapi20130214</string>
+      <string>fbapi20130410</string>
+      <string>fbapi20130702</string>
+      <string>fbapi20131010</string>
+      <string>fbapi20131219</string>
+      <string>fbapi20140410</string>
+      <string>fbapi20140116</string>
+      <string>fbapi20150313</string>
+      <string>fbapi20150629</string>
+      <string>fbapi20160328</string>
+      <string>fbauth</string>
+      <string>fb-messenger-share-api</string>
+      <string>fbauth2</string>
+      <string>fbshareextension</string>
+    </array>
+    
+    
 </dict>
 </plist>

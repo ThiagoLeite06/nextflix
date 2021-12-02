@@ -2,7 +2,7 @@
 //  Favorites+CoreDataProperties.swift
 //  
 //
-//  Created by Thiago Almeida Leite on 22/11/21.
+//  Created by Lilian on 01/12/21.
 //
 //
 
@@ -19,5 +19,6 @@ extension Favorites {
     @NSManaged public var poster_path: String?
     @NSManaged public var title: String?
     @NSManaged public var vote_average: Double
+    @NSManaged public var isMovie: Bool
 
 }

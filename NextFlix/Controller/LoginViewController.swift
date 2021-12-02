@@ -8,6 +8,10 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import FirebaseAuth
+import FacebookCore
+import FacebookLogin
+import AVFoundation
 
 class LoginViewController: UIViewController {
     
@@ -32,18 +36,48 @@ class LoginViewController: UIViewController {
         if isUserLogged() {
             logOut()
         }
+        
+        let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
+        fbLoginButton.center = view.center
+        fbLoginButton.delegate = self
+        
+        self.view.addSubview(fbLoginButton)
+        
+        if let accessToken = AccessToken.current {
+            print(">>>> Usuário logado")
+            print(accessToken)
+        }
+    }
+    
+    func loginFacebookFirebase(accessToken: String) {
+        let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+        
+        Auth.auth().signIn(with: credential) { result, error in
+            if let error = error {
+                print("deu ruim")
+            }
+            
+            print("Login com firebase")
+            print(result)
+            
+            if let user = Auth.auth().currentUser {
+                print("usuario é \(user)")
+            }
+        }
     }
     
     
     
     func getUserData() {
         let firebaseAuth = Auth.auth()
-        let user = firebaseAuth.currentUser
-        
-        guard let user = user else { return }
+        guard let user = firebaseAuth.currentUser else {
+            return
+        }
         print("Informações do usuário")
-        print("nome: \(String(describing: user.displayName))")
-        print("email: \(String(describing: user.email))")
+        print("nome: \(user.displayName ?? "")")
+        print("email: \(user.email ?? "")")
+        
+
     }
     
     func isUserLogged() -> Bool {
@@ -196,6 +230,31 @@ extension LoginViewController: GIDSignInDelegate {
             self.getUserData()
             self.performSegue(withIdentifier: "showTabBar", sender: nil)
         }
+    }
+    
+    
+}
+
+extension LoginViewController: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        print("Efetuou login")
+        
+        switch result {
+        case .none:
+            print("um erro aconteceu")
+        case .some(let loginResult):
+//            loginResult.grantedPermissions
+//            loginResult.declinedPermissions
+//            loginResult.isCancelled
+//            loginResult.token
+            if let token = loginResult.token?.tokenString {
+                loginFacebookFirebase(accessToken: token)
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("Efetuou logout")
     }
     
     
