@@ -5,12 +5,7 @@
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="vote_average" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="UserRegister" representedClassName="UserRegister" syncable="YES" codeGenerationType="class">
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="password" optional="YES" attributeType="String"/>
-    </entity>
     <elements>
         <element name="Favorites" positionX="-45" positionY="0" width="128" height="74"/>
-        <element name="UserRegister" positionX="-45" positionY="27" width="128" height="59"/>
     </elements>
 </model>
