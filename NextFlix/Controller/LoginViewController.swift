@@ -18,15 +18,14 @@ class LoginViewController: UIViewController {
     private let registerScreen = RegisterScreenViewController()
     
     @IBOutlet var signInButton: GIDSignInButton!
+    @IBOutlet var signInFbButtonContainer: UIView!
     
     @IBOutlet weak var logoUIImage: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaLabel: UILabel!
     @IBOutlet weak var senhaTextField: UITextField!
-    
-
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,11 +36,11 @@ class LoginViewController: UIViewController {
             logOut()
         }
         
-        let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
-        fbLoginButton.center = view.center
+        let fbLoginButton = FBLoginButton(frame: signInFbButtonContainer.bounds, permissions: [.publicProfile])
+        
         fbLoginButton.delegate = self
         
-        self.view.addSubview(fbLoginButton)
+        self.signInFbButtonContainer.addSubview(fbLoginButton)
         
         if let accessToken = AccessToken.current {
             print(">>>> Usuário logado")
