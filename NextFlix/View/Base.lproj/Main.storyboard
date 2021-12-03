@@ -213,7 +213,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY6-qb-FA8">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY6-qb-FA8">
                                                 <rect key="frame" x="344" y="275" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="9jz-Hl-ok6"/>
@@ -325,6 +325,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1100"/>
                     <connections>
+                        <outlet property="buttonFav" destination="WY6-qb-FA8" id="oTj-2k-N1j"/>
                         <outlet property="cartazImageView" destination="vwy-4S-R6w" id="itg-W5-LRa"/>
                         <outlet property="elencoCollectionView" destination="gm6-Q5-cdy" id="xpL-Qs-cNj"/>
                         <outlet property="elencoLabel" destination="SbM-ip-ktk" id="0Hr-JQ-Drm"/>
