@@ -44,18 +44,22 @@ class TituloSelecionadoViewController: UIViewController {
             print("isso é um filme")
         }
         
-        func updateFavoriteButton() {
-            guard let content = content else {
-                return
-            }
-            let status = viewModel.isFavorite(title: content.title)
-            buttonFav.setImage(UIImage(named: status ? "star-fill" : "star"), for: .normal)
-
-        }
+        updateFavoriteButton()
         
+   
 //        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
 //        let favorite = content?.convertToFavorite()
     }
+    
+    func updateFavoriteButton() {
+        guard let content = content else {
+            return
+        }
+        let status = viewModel.isFavorite(title: content.title)
+        buttonFav.setImage(UIImage(systemName: status ? "star.fill" : "star"), for: .normal)
+        
+    }
+    
     
     
     @IBAction func favButton(_ sender: Any) {
@@ -108,7 +112,7 @@ extension TituloSelecionadoViewController: SerieViewModelDelegate {
     }
 
     func reloadData() {
-        //
+        updateFavoriteButton()
     }
 
 
