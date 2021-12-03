@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        // MARK: - Google Login
         
         GIDSignIn.sharedInstance().presentingViewController =  self
         GIDSignIn.sharedInstance().delegate = self
@@ -36,16 +37,19 @@ class LoginViewController: UIViewController {
             logOut()
         }
         
+        // MARK: - Facebook Login
+        
         let fbLoginButton = FBLoginButton(frame: signInFbButtonContainer.bounds, permissions: [.publicProfile])
         
-        fbLoginButton.delegate = self
+        signInFbButtonContainer.addSubview(fbLoginButton)
         
-        self.signInFbButtonContainer.addSubview(fbLoginButton)
+        fbLoginButton.delegate = self
         
         if let accessToken = AccessToken.current {
             print(">>>> Usuário logado")
             print(accessToken)
         }
+        
     }
     
     func loginFacebookFirebase(accessToken: String) {
@@ -58,7 +62,7 @@ class LoginViewController: UIViewController {
             
             print("Login com firebase")
             print(result)
-            
+            self.performSegue(withIdentifier: "showTabBar", sender: nil)
             if let user = Auth.auth().currentUser {
                 print("usuario é \(user)")
             }
@@ -123,11 +127,6 @@ class LoginViewController: UIViewController {
         
         }
         
-//        textFieldsVazio()
-//        emailTextFieldVazio()
-//        senhaTextFieldVazio()
-//    }
-    
     private func textFieldsVazio(){
         if (emailTextField.text!.isEmpty && senhaTextField.text!.isEmpty) {
             

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rH0-AG-356">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rH0-AG-356">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -41,7 +42,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="353" id="lbf-Ka-eOa" customClass="MovieTableViewCell" customModule="NextFlix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="353"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="353"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lbf-Ka-eOa" id="V9e-pD-W5N">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="353"/>
@@ -372,7 +373,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="seriesTableViewCell" rowHeight="129" id="LK5-Rp-I1Z" customClass="SeriesTableViewCell" customModule="NextFlix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="129"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="129"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LK5-Rp-I1Z" id="cVv-MG-FRz">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
@@ -472,7 +473,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritesTableViewCell" rowHeight="160" id="d8J-hu-0mX" customClass="FavoritesTableViewCell" customModule="NextFlix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="160"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d8J-hu-0mX" id="crN-kE-Aas">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
@@ -670,20 +671,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL4-5T-FiM" customClass="GIDSignInButton">
-                                <rect key="frame" x="32" y="586.5" width="337" height="40"/>
+                                <rect key="frame" x="35" y="586.5" width="344" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="C8P-cY-ojh"/>
+                                    <constraint firstAttribute="height" constant="45" id="C8P-cY-ojh"/>
                                 </constraints>
                                 <connections>
                                     <action selector="loginGmailButton:" destination="rH0-AG-356" eventType="valueChanged" id="8VI-lh-Dk5"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV4-kB-SOg" customClass="FBLoginButton">
-                                <rect key="frame" x="35" y="646.5" width="344" height="40"/>
+                                <rect key="frame" x="35" y="666.5" width="344" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Hje-aJ-UK4"/>
+                                    <constraint firstAttribute="height" constant="45" id="AE5-GP-04s"/>
+                                    <constraint firstAttribute="width" constant="344" id="sSH-5q-NTa"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -691,11 +693,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D8H-6D-VLX" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="46" id="09i-uQ-V7D"/>
-                            <constraint firstItem="ZL4-5T-FiM" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="32" id="3EJ-9o-iOe"/>
+                            <constraint firstItem="ZL4-5T-FiM" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="3EJ-9o-iOe"/>
+                            <constraint firstItem="wV4-kB-SOg" firstAttribute="centerX" secondItem="4cA-kg-wx8" secondAttribute="centerX" id="4zN-UC-PMR"/>
                             <constraint firstItem="oPc-vK-A8b" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="5Nj-Ut-WgF"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="6ee-La-9Vb"/>
                             <constraint firstItem="AOK-Q2-fWH" firstAttribute="top" secondItem="RKk-Vg-j3e" secondAttribute="bottom" constant="12" id="7d2-6Z-27b"/>
-                            <constraint firstItem="wV4-kB-SOg" firstAttribute="top" secondItem="ZL4-5T-FiM" secondAttribute="bottom" constant="20" id="7fG-bw-uXS"/>
                             <constraint firstItem="RKk-Vg-j3e" firstAttribute="top" secondItem="WCi-pp-gad" secondAttribute="bottom" constant="22" id="7l7-Lt-SRZ"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="D8H-6D-VLX" secondAttribute="trailing" constant="46" id="9tW-tl-Ogc"/>
                             <constraint firstItem="AOK-Q2-fWH" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="APC-57-nJt"/>
@@ -709,16 +711,15 @@
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="NC6-rA-Brw"/>
                             <constraint firstItem="ZL4-5T-FiM" firstAttribute="top" secondItem="jSG-vS-BIc" secondAttribute="bottom" constant="20" id="Tjq-3Y-lWw"/>
                             <constraint firstItem="gJs-bM-bCS" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="WBH-Ks-mCy"/>
+                            <constraint firstItem="wV4-kB-SOg" firstAttribute="top" secondItem="ZL4-5T-FiM" secondAttribute="bottom" constant="35" id="WDQ-Zc-Jeq"/>
                             <constraint firstItem="WCi-pp-gad" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="ag4-jv-kz2"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="top" secondItem="gJs-bM-bCS" secondAttribute="bottom" constant="8" id="bas-Ij-csT"/>
                             <constraint firstItem="RKk-Vg-j3e" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="bfZ-It-bjf"/>
                             <constraint firstItem="jSG-vS-BIc" firstAttribute="top" secondItem="AOK-Q2-fWH" secondAttribute="bottom" constant="16" id="btk-2X-htr"/>
                             <constraint firstItem="lLv-R2-s0y" firstAttribute="top" secondItem="gJs-bM-bCS" secondAttribute="bottom" constant="8" id="cHX-07-8RI"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="lLv-R2-s0y" secondAttribute="trailing" constant="35" id="dVh-Fw-4K0"/>
-                            <constraint firstItem="wV4-kB-SOg" firstAttribute="leading" secondItem="11Z-1B-Epn" secondAttribute="leading" constant="35" id="eRd-sI-L4o"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="lLv-R2-s0y" secondAttribute="trailing" constant="35" id="g2Y-Mr-3nw"/>
-                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="ZL4-5T-FiM" secondAttribute="trailing" constant="45" id="ggH-6w-YoI"/>
-                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="wV4-kB-SOg" secondAttribute="trailing" constant="35" id="h08-cY-L9e"/>
+                            <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="ZL4-5T-FiM" secondAttribute="trailing" constant="35" id="ggH-6w-YoI"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="AOK-Q2-fWH" secondAttribute="trailing" constant="35" id="jZA-yH-NiT"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="WCi-pp-gad" secondAttribute="trailing" constant="35" id="jeP-Fh-de2"/>
                             <constraint firstItem="11Z-1B-Epn" firstAttribute="trailing" secondItem="x88-dL-cOX" secondAttribute="trailing" constant="35" id="omc-Ro-K3X"/>
