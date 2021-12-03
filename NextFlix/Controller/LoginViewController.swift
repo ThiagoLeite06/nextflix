@@ -69,12 +69,14 @@ class LoginViewController: UIViewController {
     
     func getUserData() {
         let firebaseAuth = Auth.auth()
-        let user = firebaseAuth.currentUser
-        
-        guard let user = user else { return }
+        guard let user = firebaseAuth.currentUser else {
+            return
+        }
         print("Informações do usuário")
-        print("nome: \(String(describing: user.displayName))")
-        print("email: \(String(describing: user.email))")
+        print("nome: \(user.displayName ?? "")")
+        print("email: \(user.email ?? "")")
+        
+
     }
     
     func isUserLogged() -> Bool {
