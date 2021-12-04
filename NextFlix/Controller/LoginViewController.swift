@@ -15,6 +15,8 @@ import AVFoundation
 
 class LoginViewController: UIViewController {
     
+    let loginViewModel = LoginViewModel()
+    
     private let registerScreen = RegisterScreenViewController()
     
     @IBOutlet var signInButton: GIDSignInButton!
@@ -25,27 +27,30 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaLabel: UILabel!
     @IBOutlet weak var senhaTextField: UITextField!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Google Login
         GIDSignIn.sharedInstance().presentingViewController =  self
         GIDSignIn.sharedInstance().delegate = self
         
-        if isUserLogged() {
-            logOut()
-        }
+        loginViewModel.logOut()
         
-        let fbLoginButton = FBLoginButton(frame: signInFbButtonContainer.bounds, permissions: [.publicProfile])
+        // Facebook Login
+        let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
+        fbLoginButton.frame = signInFbButtonContainer.bounds
+        
+        signInFbButtonContainer.addSubview(fbLoginButton)
+        fbLoginButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
         
         fbLoginButton.delegate = self
-        
-        self.signInFbButtonContainer.addSubview(fbLoginButton)
         
         if let accessToken = AccessToken.current {
             print(">>>> Usuário logado")
             print(accessToken)
         }
+        
     }
     
     func loginFacebookFirebase(accessToken: String) {
@@ -62,40 +67,8 @@ class LoginViewController: UIViewController {
             if let user = Auth.auth().currentUser {
                 print("usuario é \(user)")
             }
-        }
-    }
-    
-    
-    
-    func getUserData() {
-        let firebaseAuth = Auth.auth()
-        guard let user = firebaseAuth.currentUser else {
-            return
-        }
-        print("Informações do usuário")
-        print("nome: \(user.displayName ?? "")")
-        print("email: \(user.email ?? "")")
-        
-
-    }
-    
-    func isUserLogged() -> Bool {
-        let firebaseAuth = Auth.auth()
-        let user = firebaseAuth.currentUser
-        
-        if user != nil {
-            getUserData()
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func logOut() {
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print("Erro ao fazer logout")
+            
+            self.performSegue(withIdentifier: "showTabBar", sender: nil)
         }
     }
     
@@ -103,35 +76,27 @@ class LoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    // MARK: - Login with User and Password
+    
     @IBAction func logarButton(_ sender: Any) {
+        
         
         if (emailTextField.text == "admin@nextflix.com.br" && senhaTextField.text == "Teste@123") {
             
             performSegue(withIdentifier: "showTabBar", sender: self)
             
-//            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//                if segue.identifier == "showTabBar" {
-//                    if segue.destination is MoviesViewController {
-//                        performSegue(withIdentifier: "showTabBar", sender: self)
-//                    }
-//                }
-            }
+        }
         
         textFieldsVazio()
         emailTextFieldVazio()
         senhaTextFieldVazio()
         
-        }
-        
-//        textFieldsVazio()
-//        emailTextFieldVazio()
-//        senhaTextFieldVazio()
-//    }
+    }
     
     private func textFieldsVazio(){
         if (emailTextField.text!.isEmpty && senhaTextField.text!.isEmpty) {
             
-            let alert = UIAlertController(title: "Ops", message: "Favor informar login e/ou Senha", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Ops", message: "Favor informar e-mail e senha", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default) { myAlert in
                 self.retiraTintaBordaTextFields()
             }
@@ -206,13 +171,9 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func loginGmailButton(_ sender: Any) {
-    }
-    
-    @IBAction func loginFacebookButton(_ sender: Any) {
-    }
 }
+
+// MARK: - Login Google
 
 extension LoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -225,29 +186,33 @@ extension LoginViewController: GIDSignInDelegate {
             accessToken: authentication.accessToken)
         
         Auth.auth().signIn(with: credential) { authResult, error in
-            if let error = error { return }
-            self.getUserData()
-            self.performSegue(withIdentifier: "showTabBar", sender: nil)
+            if let error = error {
+                print("Algo deu errado! \(error)")
+                return
+            }
+            let userInfo = self.loginViewModel.getUserData()
+            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
         }
     }
     
     
 }
 
+// MARK: - Login Facebook
+
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        print("Efetuou login")
-        
         switch result {
         case .none:
             print("um erro aconteceu")
         case .some(let loginResult):
-//            loginResult.grantedPermissions
-//            loginResult.declinedPermissions
-//            loginResult.isCancelled
-//            loginResult.token
+            print(loginResult.grantedPermissions)
+            print(loginResult.declinedPermissions)
+            print(loginResult.isCancelled)
+            print(loginResult.token)
             if let token = loginResult.token?.tokenString {
                 loginFacebookFirebase(accessToken: token)
+                self.performSegue(withIdentifier: "showTabBar", sender: nil)
             }
         }
     }
@@ -255,6 +220,4 @@ extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("Efetuou logout")
     }
-    
-    
 }
