@@ -24,7 +24,8 @@ class TituloSelecionadoViewController: UIViewController {
     @IBOutlet weak var sinpseLabel: UILabel!
     @IBOutlet weak var elencoLabel: UILabel!
     @IBOutlet weak var elencoCollectionView: UICollectionView!
-        
+    @IBOutlet weak var buttonFav: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupContent()
@@ -43,9 +44,22 @@ class TituloSelecionadoViewController: UIViewController {
             print("isso é um filme")
         }
         
+        updateFavoriteButton()
+        
+   
 //        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
 //        let favorite = content?.convertToFavorite()
     }
+    
+    func updateFavoriteButton() {
+        guard let content = content else {
+            return
+        }
+        let status = viewModel.isFavorite(title: content.title)
+        buttonFav.setImage(UIImage(systemName: status ? "star.fill" : "star"), for: .normal)
+        
+    }
+    
     
     
     @IBAction func favButton(_ sender: Any) {
@@ -98,7 +112,7 @@ extension TituloSelecionadoViewController: SerieViewModelDelegate {
     }
 
     func reloadData() {
-        //
+        updateFavoriteButton()
     }
 
 

@@ -55,6 +55,13 @@ class CoreDataService {
         return getListFavoriteInCoreData()
     }
     
+    func isFavorite(title: String) -> Bool {
+        let favoritos = getListFavoriteInCoreData()
+        return favoritos.contains { (favorite) -> Bool in
+            return favorite.title == title
+        }
+    }
+    
     private func saveContext() {
         
         do {
