@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance().presentingViewController =  self
         GIDSignIn.sharedInstance().delegate = self
         
-        logOut()
+        loginViewModel.logOut()
         
         // Facebook Login
         let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
@@ -46,10 +46,10 @@ class LoginViewController: UIViewController {
         
         fbLoginButton.delegate = self
         
-        //        if let accessToken = AccessToken.current {
-        //            print(">>>> Usuário logado")
-        //            print(accessToken)
-        //        }
+        if let accessToken = AccessToken.current {
+            print(">>>> Usuário logado")
+            print(accessToken)
+        }
         
     }
     
@@ -72,47 +72,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    
-    func getUserData() {
-        let firebaseAuth = Auth.auth()
-        guard let user = firebaseAuth.currentUser else {
-            return
-        }
-        print("Informações do usuário")
-        print("nome: \(user.displayName ?? "")")
-        print("email: \(user.email ?? "")")
-        
-    }
-    
-    func isUserLogged() -> Bool {
-        let firebaseAuth = Auth.auth()
-        let user = firebaseAuth.currentUser
-        
-        if user != nil {
-            getUserData()
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func logOut() {
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print("Erro ao fazer logout")
-        }
-        
-        let loginManager = LoginManager()
-        loginManager.logOut() // this is an instance function
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    // MARK: - Login with User and Password
+    
     @IBAction func logarButton(_ sender: Any) {
+        
         
         if (emailTextField.text == "admin@nextflix.com.br" && senhaTextField.text == "Teste@123") {
             
@@ -223,8 +190,8 @@ extension LoginViewController: GIDSignInDelegate {
                 print("Algo deu errado! \(error)")
                 return
             }
-            self.getUserData()
-            self.performSegue(withIdentifier: "showTabBar", sender: nil)
+            let userInfo = self.loginViewModel.getUserData()
+            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
         }
     }
     
@@ -239,10 +206,10 @@ extension LoginViewController: LoginButtonDelegate {
         case .none:
             print("um erro aconteceu")
         case .some(let loginResult):
-            //            loginResult.grantedPermissions
-            //            loginResult.declinedPermissions
-            //            loginResult.isCancelled
-            //            loginResult.token
+            print(loginResult.grantedPermissions)
+            print(loginResult.declinedPermissions)
+            print(loginResult.isCancelled)
+            print(loginResult.token)
             if let token = loginResult.token?.tokenString {
                 loginFacebookFirebase(accessToken: token)
                 self.performSegue(withIdentifier: "showTabBar", sender: nil)
@@ -253,6 +220,4 @@ extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("Efetuou logout")
     }
-    
-    
 }
