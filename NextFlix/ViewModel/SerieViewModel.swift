@@ -30,6 +30,10 @@ class SerieViewModel {
         delegate?.reloadData()
     }
     
+    func isFavorite(title: String) -> Bool {
+        return serviceCD.isFavorite(title: title)
+    }
+    
     func addFavorite(title: String?, poster_path: String?, vote_average: Double) {
         
         if checkValues(title: title) {
