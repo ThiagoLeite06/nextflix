@@ -683,11 +683,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="7Rf-Mj-Hr1"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logarButton:" destination="rH0-AG-356" eventType="touchUpInside" id="MAf-dU-dn1"/>
+                                    <action selector="loginButton:" destination="rH0-AG-356" eventType="touchUpInside" id="BeD-jO-7oI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-Q2-fWH">
@@ -787,9 +788,10 @@
                     <connections>
                         <outlet property="emailLabel" destination="gJs-bM-bCS" id="HOP-TF-XQD"/>
                         <outlet property="emailTextField" destination="lLv-R2-s0y" id="6e0-V4-8ct"/>
+                        <outlet property="loginButton" destination="RKk-Vg-j3e" id="C3N-aQ-VIs"/>
                         <outlet property="logoUIImage" destination="D8H-6D-VLX" id="3rO-cy-qi7"/>
+                        <outlet property="passwordTextField" destination="WCi-pp-gad" id="Pay-W4-W0J"/>
                         <outlet property="senhaLabel" destination="oPc-vK-A8b" id="wPO-gH-uLo"/>
-                        <outlet property="senhaTextField" destination="WCi-pp-gad" id="n8L-K9-jcI"/>
                         <outlet property="signInButton" destination="ZL4-5T-FiM" id="tiA-RK-xGH"/>
                         <outlet property="signInFbButtonContainer" destination="wV4-kB-SOg" id="2Ad-eU-Qdj"/>
                     </connections>
@@ -902,9 +904,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emailLabel" destination="AZr-EE-GGV" id="EHF-0m-1Gt"/>
-                        <outlet property="emailTextField" destination="80U-ub-8IN" id="WYT-CV-FNo"/>
+                        <outlet property="emailTextField" destination="80U-ub-8IN" id="Tvf-ut-mag"/>
+                        <outlet property="passwordTextField" destination="teU-Sk-zoY" id="FUJ-7S-RtD"/>
                         <outlet property="senhaLabel" destination="4Bz-s4-OhC" id="5Er-ZT-6kv"/>
-                        <outlet property="senhaTextField" destination="teU-Sk-zoY" id="N8f-JU-c5C"/>
+                        <outlet property="signUpButton" destination="pva-VZ-mSB" id="PnE-7d-7zN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekf-FR-LEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
