@@ -37,13 +37,12 @@
 		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
 		AFE06368275AA22E00DA344A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE06367275AA22E00DA344A /* ProfileViewController.swift */; };
 		AFE0636A275AAD5500DA344A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE06369275AAD5500DA344A /* User.swift */; };
-		AFE0636C275ADB1600DA344A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0636B275ADB1600DA344A /* LoginViewModel.swift */; };
+		AFE0636C275ADB1600DA344A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0636B275ADB1600DA344A /* AuthenticationViewModel.swift */; };
 		D004F38127279561005BD194 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004F38027279561005BD194 /* MovieTableViewCell.swift */; };
 		D004F3832727961E005BD194 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004F3822727961E005BD194 /* MovieCollectionViewCell.swift */; };
 		D012272927360910003A91C0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D012272827360910003A91C0 /* Content.swift */; };
 		D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBD272219A800C4B72F /* LoginViewController.swift */; };
 		D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */; };
-		D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */; };
 		D0A13CC42722233200C4B72F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC32722233200C4B72F /* Register.swift */; };
 		D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */; };
 		D0A13CC82722D90300C4B72F /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A13CC72722D90300C4B72F /* Serie.swift */; };
@@ -85,14 +84,13 @@
 		AFD7CE56271646A600BCA025 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
 		AFE06367275AA22E00DA344A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFE06369275AAD5500DA344A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AFE0636B275ADB1600DA344A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AFE0636B275ADB1600DA344A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		BD3D4A0EBD32D7907A4649B1 /* Pods_NextFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D004F38027279561005BD194 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D004F3822727961E005BD194 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		D012272827360910003A91C0 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D0A13CBD272219A800C4B72F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewController.swift; sourceTree = "<group>"; };
-		D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D0A13CC32722233200C4B72F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D0A13CC52722D82000C4B72F /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		D0A13CC72722D90300C4B72F /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
@@ -115,11 +113,10 @@
 		3863125B271F8CB5003D72FB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D0A13CC1272219FE00C4B72F /* RegisterViewModel.swift */,
 				AFCC927A27346B1300FFB496 /* MovieViewModel.swift */,
 				D0E9D86827383BD600F29ABA /* SerieViewModel.swift */,
 				AF9C13712745D8FA00607287 /* FavoriteViewModel.swift */,
-				AFE0636B275ADB1600DA344A /* LoginViewModel.swift */,
+				AFE0636B275ADB1600DA344A /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -401,9 +398,8 @@
 				AFD7CE3F2715C18300BCA025 /* ViewController.swift in Sources */,
 				D0A13CC42722233200C4B72F /* Register.swift in Sources */,
 				D004F38127279561005BD194 /* MovieTableViewCell.swift in Sources */,
-				D0A13CC2272219FE00C4B72F /* RegisterViewModel.swift in Sources */,
 				AFD7CE3B2715C18300BCA025 /* AppDelegate.swift in Sources */,
-				AFE0636C275ADB1600DA344A /* LoginViewModel.swift in Sources */,
+				AFE0636C275ADB1600DA344A /* AuthenticationViewModel.swift in Sources */,
 				D0A13CC82722D90300C4B72F /* Serie.swift in Sources */,
 				AFCC927927345EE900FFB496 /* MovieService.swift in Sources */,
 				AF5FC414271B27B100605985 /* Movie.swift in Sources */,

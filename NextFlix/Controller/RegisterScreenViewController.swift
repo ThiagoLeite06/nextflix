@@ -11,49 +11,56 @@ class RegisterScreenViewController: UIViewController {
     
     var register: Register?
     
-    private let regiterViewModel = RegisterViewModel()
+    private var viewModel = RegistrationViewModel()
 
-    @IBOutlet weak var logoUIImage: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
+   
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaLabel: UILabel!
-    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        regiterViewModel.delegate = self
+        configureNotificationObservers()
+        
+        signUpButton.isEnabled = viewModel.formIsValid
+        signUpButton.backgroundColor =  #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).withAlphaComponent(0.5)
+        signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        
         
     }
     
-    @IBAction func cadastrarButton(_ sender: Any) {
-        let register = Register(email: emailTextField.text ?? "", senha: senhaTextField.text ?? "")
-        regiterViewModel.registro(register: register)
-        
-    }
     
-    @IBAction private func voltarButton(_ sender: Any) {
-        //navigationController?.viewControllers.popLast()
-        
+    @IBAction private func backButton(_ sender: Any) {
        dismiss(animated: true)
     }
     
-}
-
-extension RegisterScreenViewController: RegisterViewModelDelegate {
-    func registerResult(register: Register) {
-        
-        let alert = UIAlertController(title: "", message: "Cadastro Concluído com Sucesso!!", preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default) { myAlert in
-            self.limpaTextField()
-        }
-        
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     
-    private func limpaTextField () {
-        emailTextField.text = ""
-        senhaTextField.text = ""
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            print("DEBUG: Email change")
+            viewModel.email = sender.text
+        } else {
+            print("DEBUG: Password change")
+            viewModel.password = sender.text
+        }
+        
+        updateForm()
+        
     }
 }
+
+extension RegisterScreenViewController: FormViewModel {
+    func updateForm() {
+        signUpButton.backgroundColor = viewModel.buttonBackgroundColor
+        signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        signUpButton.isEnabled = viewModel.formIsValid
+    }
+}
+

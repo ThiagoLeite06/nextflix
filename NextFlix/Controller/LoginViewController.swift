@@ -15,7 +15,7 @@ import AVFoundation
 
 class LoginViewController: UIViewController {
     
-    let loginViewModel = LoginViewModel()
+    private var viewModel = LoginViewModel()
     
     private let registerScreen = RegisterScreenViewController()
     
@@ -26,15 +26,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaLabel: UILabel!
-    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNotificationObservers()
         // Google Login
         GIDSignIn.sharedInstance().presentingViewController =  self
         GIDSignIn.sharedInstance().delegate = self
         
-        loginViewModel.logOut()
+//        viewModel.logOut()
         
         // Facebook Login
         let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
@@ -50,6 +52,11 @@ class LoginViewController: UIViewController {
             print(">>>> Usuário logado")
             print(accessToken)
         }
+        
+        loginButton.isEnabled = viewModel.formIsValid
+        loginButton.backgroundColor =  #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).withAlphaComponent(0.5)
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+
         
     }
     
@@ -76,86 +83,30 @@ class LoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            print("DEBUG: Email change")
+            viewModel.email = sender.text
+        } else {
+            print("DEBUG: Password change")
+            viewModel.password = sender.text
+        }
+        
+        updateForm()
+        
+    }
+    
     // MARK: - Login with User and Password
-    
-    @IBAction func logarButton(_ sender: Any) {
-        
-        
-        if (emailTextField.text == "admin@nextflix.com.br" && senhaTextField.text == "Teste@123") {
-            
-            performSegue(withIdentifier: "showTabBar", sender: self)
-            
-        }
-        
-        textFieldsVazio()
-        emailTextFieldVazio()
-        senhaTextFieldVazio()
-        
+ 
+    @IBAction func loginButton(_ sender: Any) {
+        print("Login tapped!")
     }
-    
-    private func textFieldsVazio(){
-        if (emailTextField.text!.isEmpty && senhaTextField.text!.isEmpty) {
-            
-            let alert = UIAlertController(title: "Ops", message: "Favor informar e-mail e senha", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default) { myAlert in
-                self.retiraTintaBordaTextFields()
-            }
-            
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
-            pintaTextFields()
-        }
-    }
-    
-    private func emailTextFieldVazio(){
-        if (emailTextField.text!.isEmpty) {
-            
-            let alert = UIAlertController (title: "", message: "Favor informar o Login", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default) { myAlert in
-                self.retiraTintaBordaTextFields()
-            }
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
-            pintaTextFieldEmail()
-        }
-    }
-    
-    private func senhaTextFieldVazio() {
-        if (senhaTextField.text!.isEmpty) {
-            
-            let alert = UIAlertController (title: "", message: "Favor informar o Senha", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default) { myAlert in
-                self.retiraTintaBordaTextFields()
-                
-            }
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
-            pintaTextFieldSenha()
-        }
-    }
-    
-    private func pintaTextFields() {
-        emailTextField.layer.borderColor = UIColor.red.cgColor
-        emailTextField.layer.borderWidth = 2
-        senhaTextField.layer.borderColor = UIColor.red.cgColor
-        senhaTextField.layer.borderWidth = 2
-    }
-    
-    private func pintaTextFieldEmail() {
-        emailTextField.layer.borderColor = UIColor.red.cgColor
-        emailTextField.layer.borderWidth = 2
-    }
-    
-    private func pintaTextFieldSenha() {
-        senhaTextField.layer.borderColor = UIColor.red.cgColor
-        senhaTextField.layer.borderWidth = 2
-    }
-    
-    private func retiraTintaBordaTextFields() {
-        self.emailTextField.layer.borderColor = UIColor.clear.cgColor
-        self.senhaTextField.layer.borderColor = UIColor.clear.cgColor
-    }
-    
+
     
     @IBAction func registrarButton(_ sender: Any) {
         performSegue(withIdentifier: "RegisterDetail", sender: RegisterScreenViewController())
@@ -190,8 +141,8 @@ extension LoginViewController: GIDSignInDelegate {
                 print("Algo deu errado! \(error)")
                 return
             }
-            let userInfo = self.loginViewModel.getUserData()
-            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
+//            let userInfo = viewModel.getUserData()
+//            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
         }
     }
     
@@ -219,5 +170,13 @@ extension LoginViewController: LoginButtonDelegate {
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("Efetuou logout")
+    }
+}
+
+extension LoginViewController: FormViewModel {
+    func updateForm() {
+        loginButton.backgroundColor = viewModel.buttonBackgroundColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewModel.formIsValid
     }
 }
