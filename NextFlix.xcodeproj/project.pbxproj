@@ -19,6 +19,8 @@
 		AF51ACEF2730A1D400505521 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51ACEE2730A1D400505521 /* Company.swift */; };
 		AF5FC412271B26EA00605985 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AF5FC411271B26EA00605985 /* movies.json */; };
 		AF5FC414271B27B100605985 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC413271B27B100605985 /* Movie.swift */; };
+		AF6B00E2275FE29400206EDC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B00E1275FE29400206EDC /* AuthService.swift */; };
+		AF6B0140276188F000206EDC /* NextFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B013F276188F000206EDC /* NextFlixTests.swift */; };
 		AF9C13622745BA2700607287 /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF9C13602745BA2700607287 /* Favorites.xcdatamodeld */; };
 		AF9C13642745BEF000607287 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C13632745BEF000607287 /* FavoritesViewController.swift */; };
 		AF9C13722745D8FA00607287 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C13712745D8FA00607287 /* FavoriteViewModel.swift */; };
@@ -50,6 +52,16 @@
 		D0E9D86927383BD600F29ABA /* SerieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9D86827383BD600F29ABA /* SerieViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AF6B01392761887B00206EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFD7CE2F2715C18300BCA025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFD7CE362715C18300BCA025;
+			remoteInfo = NextFlix;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1266C7DF9FBB551BDD65EE55 /* Pods-NextFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextFlix.debug.xcconfig"; path = "Target Support Files/Pods-NextFlix/Pods-NextFlix.debug.xcconfig"; sourceTree = "<group>"; };
 		380755822734D4DB00BA52C5 /* SerieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieService.swift; sourceTree = "<group>"; };
@@ -64,6 +76,10 @@
 		AF51ACEE2730A1D400505521 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		AF5FC411271B26EA00605985 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AF5FC413271B27B100605985 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		AF6B00E1275FE29400206EDC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AF6B01352761887B00206EDC /* NextFlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextFlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6B013E276188EF00206EDC /* NextFlixTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NextFlixTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF6B013F276188F000206EDC /* NextFlixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextFlixTests.swift; sourceTree = "<group>"; };
 		AF9C13612745BA2700607287 /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
 		AF9C13632745BEF000607287 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		AF9C13712745D8FA00607287 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -99,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF6B01322761887B00206EDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFD7CE342715C18300BCA025 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +150,7 @@
 				AFCC927827345EE900FFB496 /* MovieService.swift */,
 				380755822734D4DB00BA52C5 /* SerieService.swift */,
 				D0D437202746FBFC00FF3ACD /* CoreDataService.swift */,
+				AF6B00E1275FE29400206EDC /* AuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -176,6 +200,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AF6B01362761887B00206EDC /* NextFlixTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF6B013F276188F000206EDC /* NextFlixTests.swift */,
+				AF6B013E276188EF00206EDC /* NextFlixTests-Bridging-Header.h */,
+			);
+			path = NextFlixTests;
+			sourceTree = "<group>";
+		};
 		AFB77EE4272B459D008601AA /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD7CE392715C18300BCA025 /* NextFlix */,
+				AF6B01362761887B00206EDC /* NextFlixTests */,
 				AFD7CE382715C18300BCA025 /* Products */,
 				66D4D2017D8C37798F51195A /* Pods */,
 				9949C64ABC11A0DEA02F3BC4 /* Frameworks */,
@@ -202,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD7CE372715C18300BCA025 /* NextFlix.app */,
+				AF6B01352761887B00206EDC /* NextFlixTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +295,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF6B01342761887B00206EDC /* NextFlixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF6B013B2761887B00206EDC /* Build configuration list for PBXNativeTarget "NextFlixTests" */;
+			buildPhases = (
+				AF6B01312761887B00206EDC /* Sources */,
+				AF6B01322761887B00206EDC /* Frameworks */,
+				AF6B01332761887B00206EDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF6B013A2761887B00206EDC /* PBXTargetDependency */,
+			);
+			name = NextFlixTests;
+			productName = NextFlixTests;
+			productReference = AF6B01352761887B00206EDC /* NextFlixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AFD7CE362715C18300BCA025 /* NextFlix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFD7CE4B2715C18500BCA025 /* Build configuration list for PBXNativeTarget "NextFlix" */;
@@ -287,9 +340,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					AF6B01342761887B00206EDC = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+						TestTargetID = AFD7CE362715C18300BCA025;
+					};
 					AFD7CE362715C18300BCA025 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -309,11 +367,19 @@
 			projectRoot = "";
 			targets = (
 				AFD7CE362715C18300BCA025 /* NextFlix */,
+				AF6B01342761887B00206EDC /* NextFlixTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF6B01332761887B00206EDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFD7CE352715C18300BCA025 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +454,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF6B01312761887B00206EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF6B0140276188F000206EDC /* NextFlixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFD7CE332715C18300BCA025 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -395,6 +469,7 @@
 				AFCC927D2734AE3400FFB496 /* MovieResponse.swift in Sources */,
 				384798CE2744663400D931D2 /* CastResponse.swift in Sources */,
 				AF9C13642745BEF000607287 /* FavoritesViewController.swift in Sources */,
+				AF6B00E2275FE29400206EDC /* AuthService.swift in Sources */,
 				AFD7CE3F2715C18300BCA025 /* ViewController.swift in Sources */,
 				D0A13CC42722233200C4B72F /* Register.swift in Sources */,
 				D004F38127279561005BD194 /* MovieTableViewCell.swift in Sources */,
@@ -432,6 +507,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AF6B013A2761887B00206EDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFD7CE362715C18300BCA025 /* NextFlix */;
+			targetProxy = AF6B01392761887B00206EDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		AFD7CE402715C18300BCA025 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -452,6 +535,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AF6B013C2761887B00206EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NW3H7K8PN7;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thiago-leite.NextFlixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "NextFlixTests/NextFlixTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextFlix.app/NextFlix";
+			};
+			name = Debug;
+		};
+		AF6B013D2761887B00206EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NW3H7K8PN7;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thiago-leite.NextFlixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "NextFlixTests/NextFlixTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextFlix.app/NextFlix";
+			};
+			name = Release;
+		};
 		AFD7CE492715C18500BCA025 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -631,6 +765,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF6B013B2761887B00206EDC /* Build configuration list for PBXNativeTarget "NextFlixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF6B013C2761887B00206EDC /* Debug */,
+				AF6B013D2761887B00206EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AFD7CE322715C18300BCA025 /* Build configuration list for PBXProject "NextFlix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

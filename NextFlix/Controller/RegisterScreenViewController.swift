@@ -14,10 +14,9 @@ class RegisterScreenViewController: UIViewController {
     private var viewModel = RegistrationViewModel()
 
     @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var emailLabel: UILabel!
    
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var senhaLabel: UILabel!
+   
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
@@ -28,13 +27,29 @@ class RegisterScreenViewController: UIViewController {
         signUpButton.isEnabled = viewModel.formIsValid
         signUpButton.backgroundColor =  #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).withAlphaComponent(0.5)
         signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
-        
-        
+        signUpButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+   
     }
     
+    @objc func handleSignUp() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        let credentials = AuthCredentials(email: email, password: password)
+        
+        AuthService.registerUser(withCredential: credentials) { error in
+            if let error = error {
+                print("DEBUG: Failed to register user \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successfully registered user with firestore")
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
-    @IBAction private func backButton(_ sender: Any) {
-       dismiss(animated: true)
+    @IBAction private func backButton() {
+        dismiss(animated: true, completion: nil)
     }
     
     func configureNotificationObservers() {
