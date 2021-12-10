@@ -700,7 +700,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="registrarButton:" destination="rH0-AG-356" eventType="touchUpInside" id="izr-1A-q9L"/>
+                                    <action selector="goToRegister:" destination="rH0-AG-356" eventType="touchUpInside" id="gtv-25-1tW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSG-vS-BIc">
@@ -846,9 +846,6 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Cadastrar"/>
-                                <connections>
-                                    <action selector="cadastrarButton:" destination="hV9-4K-n9J" eventType="touchUpInside" id="Sgl-WU-D16"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fb-t8-SV7">
                                 <rect key="frame" x="35" y="509.5" width="344" height="30"/>
@@ -856,7 +853,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltarButton:" destination="hV9-4K-n9J" eventType="touchUpInside" id="mIb-9v-feE"/>
+                                    <action selector="backButton" destination="hV9-4K-n9J" eventType="touchUpInside" id="dOF-ua-jrN"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Njh-lZ-8Bg">
@@ -903,10 +900,8 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="emailLabel" destination="AZr-EE-GGV" id="EHF-0m-1Gt"/>
                         <outlet property="emailTextField" destination="80U-ub-8IN" id="Tvf-ut-mag"/>
                         <outlet property="passwordTextField" destination="teU-Sk-zoY" id="FUJ-7S-RtD"/>
-                        <outlet property="senhaLabel" destination="4Bz-s4-OhC" id="5Er-ZT-6kv"/>
                         <outlet property="signUpButton" destination="pva-VZ-mSB" id="PnE-7d-7zN"/>
                     </connections>
                 </viewController>
@@ -958,7 +953,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tOU-yn-Ium"/>
+        <segue reference="deX-Bu-bWe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="390" height="256"/>

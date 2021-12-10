@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance().presentingViewController =  self
         GIDSignIn.sharedInstance().delegate = self
         
-//        viewModel.logOut()
+        // viewModel.logOut()
         
         // Facebook Login
         let fbLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile])
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
         loginButton.isEnabled = viewModel.formIsValid
         loginButton.backgroundColor =  #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).withAlphaComponent(0.5)
         loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
-
+        
         
     }
     
@@ -102,24 +102,24 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Login with User and Password
- 
+    
     @IBAction func loginButton(_ sender: Any) {
         print("Login tapped!")
-    }
-
-    
-    @IBAction func registrarButton(_ sender: Any) {
-        performSegue(withIdentifier: "RegisterDetail", sender: RegisterScreenViewController())
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "RegisterDetail" {
-                if let register = sender as? Register {
-                    if let proximaTela = segue.destination as? RegisterScreenViewController {
-                        proximaTela.register = register
-                    }
-                }
+        Auth.auth().signIn(withEmail: email, password: password) { [ weak self ] result, error in
+            guard error == nil else {
+                print("DEBUG: User not found!!")
+                return
             }
+            print("Login successfully")
+            self?.performSegue(withIdentifier: "showTabBar", sender: nil)
         }
+    }
+    
+    @IBAction func goToRegister(_ sender: Any) {
+        performSegue(withIdentifier: "RegisterDetail", sender: nil)
     }
     
 }
@@ -141,8 +141,8 @@ extension LoginViewController: GIDSignInDelegate {
                 print("Algo deu errado! \(error)")
                 return
             }
-//            let userInfo = viewModel.getUserData()
-//            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
+            //            let userInfo = viewModel.getUserData()
+            //            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
         }
     }
     

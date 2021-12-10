@@ -11,7 +11,13 @@ import Firebase
 import FirebaseAuth
 import FacebookCore
 import FacebookLogin
+import FBSDKCoreKit
 
+enum SistemaLogin {
+    case google
+    case facebook
+    case email
+}
 
 protocol FormViewModel {
     func updateForm()
@@ -40,17 +46,34 @@ struct LoginViewModel: AuthenticationViewModel {
         return formIsValid ? .white : UIColor(white: 1, alpha: 0.67)
     }
     
-//    func getUserData() -> User {
-//        let firebaseAuth = Auth.auth()
-//        if let user = firebaseAuth.currentUser {
-//            let name = user.displayName ?? ""
-//            let email = user.email ?? ""
-//            let authenticatedUser = User(displayName: name, email: email)
-//            print("===*===*===*===\(authenticatedUser)===*===*===*===")
-//            return authenticatedUser
-//        }
-//        return User(displayName: "", email: "")
-//    }
+    func getUserData() -> User {
+        
+        switch userFrom() {
+            case .email:
+                let firebaseUser = Auth.auth().currentUser
+                let name = firebaseUser?.displayName ?? ""
+                let email = firebaseUser?.email ?? ""
+                let authenticatedUser = User(displayName: name, email: email)
+                print("===*===*===*===\(authenticatedUser)===*===*===*===")
+                return authenticatedUser
+            case .facebook:
+                break
+            case .google:
+                break
+        }
+        
+        return User(displayName: "", email: "")
+    }
+    
+    private func userFrom() -> SistemaLogin {
+        if Auth.auth().currentUser != nil {
+            return .email
+        } else if AccessToken.isCurrentAccessTokenActive {
+            return .facebook
+        }
+        
+        return .google
+    }
 //
 //    func logOut() {
 //        do {
