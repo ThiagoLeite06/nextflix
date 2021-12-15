@@ -142,7 +142,7 @@ extension LoginViewController: GIDSignInDelegate {
                 return
             }
             //            let userInfo = viewModel.getUserData()
-            //            self.performSegue(withIdentifier: "showTabBar", sender: userInfo)
+                        self.performSegue(withIdentifier: "showTabBar", sender: nil)
         }
     }
     

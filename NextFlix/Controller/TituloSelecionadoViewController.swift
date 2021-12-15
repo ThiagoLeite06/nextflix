@@ -56,7 +56,8 @@ class TituloSelecionadoViewController: UIViewController {
             return
         }
         let status = viewModel.isFavorite(title: content.title)
-        buttonFav.setImage(UIImage(systemName: status ? "star.fill" : "star"), for: .normal)
+        print("Debug ======== \(status)")
+        buttonFav.setImage(UIImage(systemName: status == true ? "star.fill" : "star"), for: .normal)
         
     }
     
@@ -67,8 +68,11 @@ class TituloSelecionadoViewController: UIViewController {
         guard let content = content else {
             return
         }
-
-        viewModel.addFavorite(title: content.title, poster_path: content.poster_path, vote_average: content.vote_average)
+        
+        let isMovie = content is Movie
+        
+        viewModel.addFavorite(title: content.title, poster_path: content.poster_path, vote_average: content.vote_average, isMovie: isMovie)
+        
         
     }
     

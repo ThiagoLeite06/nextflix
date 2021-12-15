@@ -29,20 +29,25 @@ class CoreDataService {
     
     func getListFavoriteMovies() -> [Favorites] {
         return getListFavoriteInCoreData().filter { (favorite) -> Bool in
-            return favorite.title == "A"
+            return favorite.isMovie
         }
     }
     
     func getListFavoriteSeries() -> [Favorites] {
-        return []
+        return getListFavoriteInCoreData().filter { (favorite) -> Bool in
+            return !favorite.isMovie
+        }
     }
     
-    func addFavoriteInCoreData(title: String, poster_path: String?, vote_average: Double) -> [Favorites] {
+    func addFavoriteInCoreData(title: String, poster_path: String?, vote_average: Double, isMovie: Bool) -> [Favorites] {
+        
+        guard !isFavorite(title: title) else { return getListFavoriteInCoreData() }
         
         let favorite: Favorites = .init(context: context)
         favorite.poster_path = poster_path
         favorite.title = title
         favorite.vote_average = vote_average
+        favorite.isMovie = isMovie
         
         saveContext()
         return getListFavoriteInCoreData()

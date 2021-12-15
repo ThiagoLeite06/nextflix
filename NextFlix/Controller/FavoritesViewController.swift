@@ -12,6 +12,8 @@ class FavoritesViewController: UIViewController {
     private let viewModel = FavoriteViewModel()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filmAndSerieSegmentedControl: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,29 @@ class FavoritesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.loadData()
+        filterSegmentedControl()
+    }
+    
+    private func filterSegmentedControl() {
+        
+        guard let favoriteType = FavoriteViewModel.FavoriteType(rawValue: filmAndSerieSegmentedControl.selectedSegmentIndex) else { return }
+        
+        switch favoriteType {
+        case .film:
+            viewModel.loadData(with: 0)
+        case .serie:
+            viewModel.loadData(with: 1)
+        }
+        
+        reloadData()
+    }
+    
+    @IBAction func mySegmentedControl(_ sender: UISegmentedControl) {
+        
+        filterSegmentedControl()
     }
 }
+
 extension FavoritesViewController: FavoriteViewModelDelegate {
     func reloadData() {
         tableView.reloadData()
@@ -38,45 +60,36 @@ extension FavoritesViewController: FavoriteViewModelDelegate {
 }
 
 extension FavoritesViewController: UITableViewDelegate {
+    
+      
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("celula selecionada")
+    }
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+
         if editingStyle == .delete {
-            
+
             let favorite = viewModel.favorites[indexPath.row]
             viewModel.removeFavorite(favorite: favorite)
-            
+
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
+
         } else if editingStyle == .insert {
-            
+
         }
     }
 }
 
 extension FavoritesViewController: UITableViewDataSource {
     
-    // Configuração Número Seção
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return viewModel.titleSection.count
-//    }
-//
-        // Configuração font e fundo Seção
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        if let headView = view as? UITableViewHeaderFooterView {
-//            headView.contentView.backgroundColor = UIColor(red: 0.06, green: 0.06, blue: 0.06, alpha: 1.00)
-//            headView.textLabel?.textColor = UIColor(red: 0.86, green: 0.24, blue: 0.69, alpha: 1.00)
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.getFavoriteCount()
     }
-    
-    // Separação Seção
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return viewModel.titleSection[section]
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "favoritesTableViewCell", for: indexPath) as? FavoritesTableViewCell {
