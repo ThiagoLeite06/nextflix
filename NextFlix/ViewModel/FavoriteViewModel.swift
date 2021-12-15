@@ -14,6 +14,11 @@ protocol FavoriteViewModelDelegate {
 
 class FavoriteViewModel {
     
+    enum FavoriteType: Int {
+        case film
+        case serie
+    }
+    
     // Titulo Seção
     //var titleSection = ["Filmes", "Séries"]
     
@@ -37,4 +42,17 @@ class FavoriteViewModel {
     }
     
     
+    func loadData(with type: Int) {
+        
+        guard let favoriteType: FavoriteType = .init(rawValue: type) else { return }
+        
+        switch favoriteType {
+        case .film:
+            favorites = service.getListFavoriteMovies()
+        case .serie:
+            favorites = service.getListFavoriteSeries()
+        }
+        
+        delegate?.reloadData()
+    }
 }
