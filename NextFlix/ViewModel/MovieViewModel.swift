@@ -8,13 +8,13 @@
 import Foundation
 
 class MovieViewModel {
-    let service: MovieService = .init()
+    var movies = [Movie]()
     
-//    func getMoviesByPopularity() {
-//        service.getMovieByPopularity { movie in
-//            if let movie = movie {
-//                print(movie)
-//            }
-//        }
-//    }
+    private let service = MovieService()
+    
+    func getMoviesByPopularity() {
+        service.fetchData { movie in
+            self.movies = movie
+        }
+    }
 }
