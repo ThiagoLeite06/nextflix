@@ -20,13 +20,15 @@ class SerieViewModel {
     
     public let service = SerieService()
     
-    var series: [Favorites] = []
+    var series = [Serie]()
+    
+    var favoriteSeries: [Favorites] = []
     
     private let serviceCD = CoreDataService()
     
     public func loadData() {
         delegate?.loadData()
-        series = serviceCD.getListFavoriteInCoreData()
+//      series = serviceCD.getListFavoriteInCoreData()
         delegate?.reloadData()
     }
     
@@ -37,8 +39,7 @@ class SerieViewModel {
     func addFavorite(title: String?, poster_path: String?, vote_average: Double, isMovie: Bool) {
         
         if checkValues(title: title) {
-            
-            series = serviceCD.addFavoriteInCoreData(title: title!, poster_path: poster_path, vote_average: vote_average, isMovie: isMovie)
+            favoriteSeries = serviceCD.addFavoriteInCoreData(title: title!, poster_path: poster_path, vote_average: vote_average, isMovie: isMovie)
             delegate?.reloadData()
         } else {
             delegate?.errorAddFavorite()
@@ -47,12 +48,11 @@ class SerieViewModel {
     
     func removeFavorite(image: String?, title: String?) {
         
-        //series = serviceCD.removeFavoriteInCoreData(favorite: favorite)
+        //favoriteSeries = serviceCD.removeFavoriteInCoreData(favorite: favorite)
         delegate?.reloadData()
     }
     
     func checkValues(title: String?) -> Bool {
-        
         if let title = title, title.isEmpty {
             delegate?.errorAddFavorite()
             return false
@@ -61,19 +61,8 @@ class SerieViewModel {
         return true
     }
     
-    //    func convertStringForImage(strImage: String) -> UIImage? {
-    //
-    //        guard let image = strImage else {
-    //            delegate?.errorAddFavorite()
-    //            return UIImage(named: "semImagem")
-    //        }
-    //        return image
-    //    }
     
     func numberOfFavoriteOnTheList() -> Int {
         return series.count
     }
-    
-    
-    
 }

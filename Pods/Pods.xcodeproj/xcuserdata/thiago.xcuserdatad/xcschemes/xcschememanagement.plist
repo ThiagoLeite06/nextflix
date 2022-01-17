@@ -21,7 +21,7 @@
 		<key>BoringSSL-GRPC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>26</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
@@ -96,7 +96,7 @@
 		<key>FirebaseFirestore.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>27</integer>
 		</dict>
 		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
@@ -178,7 +178,7 @@
 		<key>abseil.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>24</integer>
 		</dict>
 		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme</key>
 		<dict>
@@ -202,7 +202,7 @@
 		<key>gRPC-C++.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>23</integer>
 		</dict>
 		<key>gRPC-Core.xcscheme</key>
 		<dict>
@@ -214,7 +214,7 @@
 		<key>gRPC-Core.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>21</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>
@@ -226,7 +226,7 @@
 		<key>leveldb-library.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>22</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>

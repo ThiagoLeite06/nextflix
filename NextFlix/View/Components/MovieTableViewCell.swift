@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CarPlay
 
 class MovieTableViewCell: UITableViewCell {
     

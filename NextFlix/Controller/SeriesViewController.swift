@@ -11,16 +11,14 @@ class SeriesViewController: UIViewController {
     
     @IBOutlet weak var serieTableView: UITableView!
     
-    var series: [Serie] = []
-    
-    private let seriesViewModel = SerieViewModel()
+    private let viewModel = SerieViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
         self.loadData()
         self.serieTableView.reloadData()
-        seriesViewModel.delegate = self
+//        seriesViewModel.delegate = self
     }
     
     
@@ -33,10 +31,12 @@ class SeriesViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension SeriesViewController: UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let serie = series[indexPath.row]
+        let serie = viewModel.series[indexPath.row]
         performSegue(withIdentifier: "SegueDetailIdentifier", sender: serie)
     }
     
@@ -46,6 +46,8 @@ extension SeriesViewController: UITableViewDelegate {
 
 }
 
+// MARK: - UITableViewDataSource
+
 extension SeriesViewController: UITableViewDataSource {
     
     private func configTableView() {
@@ -54,17 +56,15 @@ extension SeriesViewController: UITableViewDataSource {
         serieTableView.tableFooterView = .init(frame: .zero)
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return series.count
+        return viewModel.numberOfFavoriteOnTheList()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = serieTableView.dequeueReusableCell(withIdentifier: "seriesTableViewCell", for: indexPath) as? SeriesTableViewCell {
+            cell.setup(serie: viewModel.series[indexPath.row])
             
-            cell.setup(serie: series[indexPath.row])
             return cell
         }
         
@@ -76,6 +76,7 @@ extension SeriesViewController: UITableViewDataSource {
     }
 }
 
+
 extension SeriesViewController: SerieViewModelDelegate {
     func errorAddFavorite() {
         //
@@ -86,9 +87,9 @@ extension SeriesViewController: SerieViewModelDelegate {
     }
     
     func loadData() {
-        self.seriesViewModel.service.loadSeries{ items in
+        viewModel.service.loadSeries{ items in
             DispatchQueue.main.async {
-                self.series = items
+                self.viewModel.series = items
                 self.serieTableView.reloadData()
             }
         }
