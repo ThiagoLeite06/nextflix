@@ -11,48 +11,36 @@ class MoviesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var movies: [Movie] = []
+    let viewModel = MovieViewModel()
     
-    private let service = MovieService()
-     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
         tableView.dataSource = self
-        self.loadData()
-  
-    }
-    
-    
-        
-    private func loadData() {
-        self.service.fetchData { items in
-            DispatchQueue.main.async {
-                self.movies = items
-                self.tableView.reloadData()
-            }
-        }
+        viewModel.delegate = self
+        viewModel.didLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let viewController = segue.destination as? TituloSelecionadoViewController {
-                viewController.content = sender as? Movie
-            }
+        if let viewController = segue.destination as? TituloSelecionadoViewController {
+            viewController.content = sender as? Movie
+        }
     }
 }
-extension MoviesViewController: UITableViewDelegate {
-    
+
+extension MoviesViewController: MovieViewModelDelegate {
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
+
+// MARK: - TableViewDataSource
+
 extension MoviesViewController: UITableViewDataSource{
     
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        let header = view as! UITableViewHeaderFooterView
-////        header.textLabel?.backgroundColor = UIColor.black
-////        header.textLabel?.font = UIFont(name: "Verdana", size: 14)!
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfRowsInSection
     }
     
   
@@ -75,14 +63,17 @@ extension MoviesViewController: UITableViewDataSource{
     }
 }
 
+// MARK: - CollectionView
+
 extension MoviesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
+        return viewModel.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collection = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MovieCollectionViewCell
-        collection.setup(movie: movies[indexPath.row])
+        collection.setup(movie: viewModel.movies[indexPath.row])
+
         return collection
     }
     
@@ -91,7 +82,7 @@ extension MoviesViewController: UICollectionViewDataSource {
 
 extension MoviesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let movie = movies[indexPath.row]
+        let movie = viewModel.movies[indexPath.row]
         performSegue(withIdentifier: "SegueFilmeDetailIdentifier", sender: movie)
     }
 }
