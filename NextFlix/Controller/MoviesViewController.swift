@@ -11,17 +11,13 @@ class MoviesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel = MovieViewModel()
+    let viewModel = MovieViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        self.loadData()
-  
-    }
-    
-    private func loadData() {
-       return viewModel.getMoviesByPopularity()
+        viewModel.delegate = self
+        viewModel.didLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,12 +27,20 @@ class MoviesViewController: UIViewController {
     }
 }
 
+extension MoviesViewController: MovieViewModelDelegate {
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+}
+
 // MARK: - TableViewDataSource
 
 extension MoviesViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfRowsInSection
     }
     
   
@@ -69,6 +73,7 @@ extension MoviesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collection = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! MovieCollectionViewCell
         collection.setup(movie: viewModel.movies[indexPath.row])
+
         return collection
     }
     

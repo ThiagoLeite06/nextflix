@@ -51,6 +51,9 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-5Z-qnR">
                                                     <rect key="frame" x="20" y="49" width="374" height="293"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="295" id="UcI-lx-PYP"/>
+                                                    </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M7M-YY-rT1">
                                                         <size key="itemSize" width="134" height="180"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -182,19 +185,19 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddC-L4-a7d">
-                                                <rect key="frame" x="20" y="335" width="374" height="25"/>
+                                                <rect key="frame" x="20" y="345" width="374" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <color key="textColor" red="0.85882352939999995" green="0.24313725489999999" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elenco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbM-ip-ktk">
-                                                <rect key="frame" x="20" y="620" width="374" height="25"/>
+                                                <rect key="frame" x="20" y="630" width="374" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <color key="textColor" red="0.85882352939999995" green="0.24313725489999999" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bfg-rT-QX8">
-                                                <rect key="frame" x="20" y="370" width="374" height="200"/>
+                                                <rect key="frame" x="20" y="380" width="374" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="t3a-vS-ghP"/>
@@ -205,10 +208,10 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toY-xx-k7i">
-                                                <rect key="frame" x="20" y="275" width="47" height="50"/>
+                                                <rect key="frame" x="20" y="275" width="308" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="dbY-dv-zuv"/>
+                                                    <constraint firstAttribute="height" constant="60" id="yCQ-mN-cX6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,7 +230,7 @@
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gm6-Q5-cdy">
-                                                <rect key="frame" x="20" y="663" width="374" height="180"/>
+                                                <rect key="frame" x="20" y="673" width="374" height="180"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="dSa-z5-Cdp"/>
@@ -283,6 +286,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Bfg-rT-QX8" secondAttribute="trailing" constant="20" id="7tD-hj-J3H"/>
                                             <constraint firstAttribute="trailing" secondItem="ddC-L4-a7d" secondAttribute="trailing" constant="20" id="A6f-ye-hx1"/>
+                                            <constraint firstItem="WY6-qb-FA8" firstAttribute="leading" secondItem="toY-xx-k7i" secondAttribute="trailing" constant="16" id="F9Y-M9-CyR"/>
                                             <constraint firstItem="LUe-uB-XNy" firstAttribute="top" secondItem="hFY-sy-pAc" secondAttribute="top" constant="8" id="IFL-y5-yFA"/>
                                             <constraint firstAttribute="trailing" secondItem="WY6-qb-FA8" secondAttribute="trailing" constant="20" id="IYj-B3-OJa"/>
                                             <constraint firstItem="vwy-4S-R6w" firstAttribute="top" secondItem="hFY-sy-pAc" secondAttribute="top" id="JPy-pd-zgh"/>
