@@ -28,8 +28,8 @@ class SeriesTableViewCell: UITableViewCell {
     func setup(serie: Serie) {
         let url = URL(string: "https://image.tmdb.org/t/p/w500\(serie.poster_path)")!
         self.serieImageView.kf.setImage(with:url)
-        serieImageView.clipsToBounds = true
-        serieImageView.layer.cornerRadius = 15
+//        serieImageView.clipsToBounds = true
+//        serieImageView.layer.cornerRadius = 15
         titleSerieLabel.text = serie.name
         releaseLabel.text = serie.first_air_date
     }
