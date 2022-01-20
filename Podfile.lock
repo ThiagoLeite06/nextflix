@@ -508,7 +508,9 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - Nimble (9.2.1)
   - PromisesObjC (2.0.0)
+  - Quick (4.0.0)
 
 DEPENDENCIES:
   - FacebookCore
@@ -518,6 +520,8 @@ DEPENDENCIES:
   - Firebase/Firestore
   - GoogleSignIn (~> 5.0)
   - Kingfisher (~> 7.0)
+  - Nimble
+  - Quick
 
 SPEC REPOS:
   trunk:
@@ -546,7 +550,9 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
+    - Nimble
     - PromisesObjC
+    - Quick
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -574,8 +580,10 @@ SPEC CHECKSUMS:
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
 
-PODFILE CHECKSUM: e866dd8596d6cad892fb45c2618cea05d1d50ba2
+PODFILE CHECKSUM: c5fd83d654b380f31ee4039c03dc8ba0dbd7ecde
 
 COCOAPODS: 1.11.2
