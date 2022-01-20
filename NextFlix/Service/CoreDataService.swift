@@ -53,11 +53,15 @@ class CoreDataService {
         return getListFavoriteInCoreData()
     }
     
-    func removeFavoriteInCoreData(favorite: Favorites) -> [Favorites] {
+    func removeFavoriteInCoreData(title: String) {
+        let favoritos = getListFavoriteInCoreData()
+        let favorite = favoritos.first { item in
+            return item.title == title
+        }
+        guard let f = favorite else { return }
         
-        context.delete(favorite)
+        context.delete(f)
         saveContext()
-        return getListFavoriteInCoreData()
     }
     
     func isFavorite(title: String) -> Bool {
