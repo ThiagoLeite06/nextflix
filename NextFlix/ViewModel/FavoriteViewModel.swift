@@ -19,9 +19,6 @@ class FavoriteViewModel {
         case serie
     }
     
-    // Titulo Seção
-    //var titleSection = ["Filmes", "Séries"]
-    
     var favorites: [Favorites] = []
     
     var delegate: FavoriteViewModelDelegate?
@@ -38,9 +35,8 @@ class FavoriteViewModel {
     }
     
     func removeFavorite(favorite: Favorites) {
-        favorites = service.removeFavoriteInCoreData(favorite: favorite)
+//        favorites = service.removeFavoriteInCoreData(favorite: favorite)
     }
-    
     
     func loadData(with type: Int) {
         

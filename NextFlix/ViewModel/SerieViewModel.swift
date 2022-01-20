@@ -46,9 +46,8 @@ class SerieViewModel {
         }
     }
     
-    func removeFavorite(image: String?, title: String?) {
-        
-        //favoriteSeries = serviceCD.removeFavoriteInCoreData(favorite: favorite)
+    func removeFavorite(title: String) {
+        serviceCD.removeFavoriteInCoreData(title: title)
         delegate?.reloadData()
     }
     
@@ -57,7 +56,6 @@ class SerieViewModel {
             delegate?.errorAddFavorite()
             return false
         }
-        
         return true
     }
     

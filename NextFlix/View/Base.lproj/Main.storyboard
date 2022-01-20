@@ -216,7 +216,7 @@
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title=" " image="star"/>
                                                 <connections>
-                                                    <action selector="favButton:" destination="ytt-X1-atA" eventType="touchUpInside" id="v43-RO-05x"/>
+                                                    <action selector="favoriteButtonTapped:" destination="ytt-X1-atA" eventType="touchUpInside" id="Jz1-bN-r1L"/>
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gm6-Q5-cdy">

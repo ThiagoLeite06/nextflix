@@ -12,11 +12,13 @@ import SwiftUI
 class TituloSelecionadoViewController: UIViewController {
     
     private let movieService = MovieService()
+    private let coreDataService = CoreDataService()
     private var cast: [Cast] = []
     
     var content: Content?
-
+    
     let viewModel = SerieViewModel()
+    //    let favoriteViewModel = favoriteViewModel()
     
     @IBOutlet weak var cartazImageView: UIImageView!
     @IBOutlet weak var tituloSelecionadoLabel: UILabel!
@@ -25,7 +27,7 @@ class TituloSelecionadoViewController: UIViewController {
     @IBOutlet weak var elencoLabel: UILabel!
     @IBOutlet weak var elencoCollectionView: UICollectionView!
     @IBOutlet weak var buttonFav: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupContent()
@@ -44,11 +46,11 @@ class TituloSelecionadoViewController: UIViewController {
             print("isso é um filme")
         }
         
-        updateFavoriteButton()
         
-   
-//        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
-//        let favorite = content?.convertToFavorite()
+        
+        
+        //        favButton.setImage(UIImage(named: "heart-fill"), for: .normal)
+        //        let favorite = content?.convertToFavorite()
     }
     
     func updateFavoriteButton() {
@@ -63,17 +65,22 @@ class TituloSelecionadoViewController: UIViewController {
     
     
     
-    @IBAction func favButton(_ sender: Any) {
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
         
         guard let content = content else {
             return
         }
         
         let isMovie = content is Movie
-        
-        viewModel.addFavorite(title: content.title, poster_path: content.poster_path, vote_average: content.vote_average, isMovie: isMovie)
-        
-        
+        let favorite = coreDataService.isFavorite(title: content.title)
+        if favorite {
+            viewModel.removeFavorite(title: content.title)
+            print("============== é favorito")
+        } else {
+            viewModel.addFavorite(title: content.title, poster_path: content.poster_path, vote_average: content.vote_average, isMovie: isMovie)
+        }
+
+        updateFavoriteButton()
     }
     
     @IBAction func closeButton(_ sender: Any) {
@@ -90,7 +97,7 @@ class TituloSelecionadoViewController: UIViewController {
         guard let content = content else {
             return
         }
-
+        
         self.cartazImageView.kf.setImage(with:content.cover, placeholder: UIImage(named: "semImagem"))
         self.tituloSelecionadoLabel.text = content.title
         self.textoSinopseTextView.text = content.overview
@@ -110,16 +117,16 @@ extension TituloSelecionadoViewController: SerieViewModelDelegate {
     func loadData() {
         //
     }
-
+    
     func errorAddFavorite() {
         //
     }
-
+    
     func reloadData() {
         updateFavoriteButton()
     }
-
-
+    
+    
 }
 
 extension TituloSelecionadoViewController: UICollectionViewDataSource {
