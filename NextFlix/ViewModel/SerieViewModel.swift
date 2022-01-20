@@ -60,7 +60,7 @@ class SerieViewModel {
     }
     
     
-    func numberOfFavoriteOnTheList() -> Int {
+    func numberOfSeriesOnTheList() -> Int {
         return series.count
     }
 }

@@ -15,4 +15,10 @@ target 'NextFlix' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   
+  target 'NextFlixTests' do
+     inherit! :search_paths
+   pod 'Quick'
+   pod 'Firebase/Core'
+   pod 'Nimble'
+   end
 end
