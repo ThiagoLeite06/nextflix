@@ -596,6 +596,9 @@
                     <tabBarItem key="tabBarItem" title="Perfil" image="user" id="V8T-dF-YuR">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="loggedUserLbl" destination="1Ig-Aw-wyV" id="kVa-pv-iPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KH4-xd-aOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

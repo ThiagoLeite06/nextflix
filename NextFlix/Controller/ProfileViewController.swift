@@ -9,20 +9,20 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-//class ProfileViewController: UIViewController {
-//
-//    let authenticationViewModel: AuthenticationViewModel?
-//    
-//    @IBOutlet weak var loggedUserLbl: UILabel!
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        let user = Auth.auth().currentUser?.displayName
-//        
-//    }
-//    
-//
-//    
-//
-//}
+class ProfileViewController: UIViewController {
+
+    @IBOutlet weak var loggedUserLbl: UILabel!
+    
+    private let loginViewModel = LoginViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let user = loginViewModel.getUserData()
+        loggedUserLbl.text = user.displayName
+    }
+    
+
+    
+
+}

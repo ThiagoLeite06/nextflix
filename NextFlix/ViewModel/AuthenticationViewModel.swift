@@ -57,12 +57,13 @@ struct LoginViewModel: AuthenticationViewModel {
                 print("===*===*===*===\(authenticatedUser)===*===*===*===")
                 return authenticatedUser
             case .facebook:
-                break
+                return User(displayName: "", email: "")
             case .google:
-                break
+                let googleUser = GIDSignIn.sharedInstance()?.currentUser
+                let name = googleUser?.profile.givenName ?? ""
+                let email = googleUser?.profile.email ?? ""
+                return User(displayName: name, email: email)
         }
-        
-        return User(displayName: "", email: "")
     }
     
     private func userFrom() -> SistemaLogin {
