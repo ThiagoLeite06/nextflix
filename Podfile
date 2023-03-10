@@ -10,7 +10,6 @@ target 'NextFlix' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'GoogleSignIn', '~> 5.0'
   
   pod 'FacebookCore'
   pod 'FacebookLogin'

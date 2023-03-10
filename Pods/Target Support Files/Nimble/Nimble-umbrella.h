@@ -15,6 +15,8 @@
 #import "NMBExceptionCapture.h"
 #import "NMBStringify.h"
 #import "CwlCatchException.h"
+#import "CwlCatchException.h"
+#import "CwlMachBadInstructionHandler.h"
 #import "CwlMachBadInstructionHandler.h"
 #import "mach_excServer.h"
 

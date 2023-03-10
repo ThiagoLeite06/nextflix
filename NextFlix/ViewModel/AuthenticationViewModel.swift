@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 import Firebase
 import FirebaseAuth
 import FacebookCore
@@ -46,7 +45,7 @@ struct LoginViewModel: AuthenticationViewModel {
         return formIsValid ? .white : UIColor(white: 1, alpha: 0.67)
     }
     
-    func getUserData() -> User {
+    func getUserData() -> Any {
         
         switch userFrom() {
             case .email:
@@ -59,10 +58,11 @@ struct LoginViewModel: AuthenticationViewModel {
             case .facebook:
                 return User(displayName: "", email: "")
             case .google:
-                let googleUser = GIDSignIn.sharedInstance()?.currentUser
-                let name = googleUser?.profile.givenName ?? ""
-                let email = googleUser?.profile.email ?? ""
-                return User(displayName: name, email: email)
+            return User(displayName: "", email: "")
+////                let googleUser = GIDSignIn.sharedInstance()?.currentUser
+////                let name = googleUser?.profile.givenName ?? ""
+////                let email = googleUser?.profile.email ?? ""
+//                return User(displayName: name, email: email)
         }
     }
     

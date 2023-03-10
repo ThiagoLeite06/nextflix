@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 import Firebase
 import FirebaseAuth
 import FacebookCore
@@ -19,7 +18,7 @@ class LoginViewController: UIViewController {
     
     private let registerScreen = RegisterScreenViewController()
     
-    @IBOutlet var signInButton: GIDSignInButton!
+    
     @IBOutlet var signInFbButtonContainer: UIView!
     
     @IBOutlet weak var logoUIImage: UIImageView!
@@ -33,8 +32,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         configureNotificationObservers()
         // Google Login
-        GIDSignIn.sharedInstance().presentingViewController =  self
-        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().presentingViewController =  self
+//        GIDSignIn.sharedInstance().delegate = self
         
         // viewModel.logOut()
         
@@ -126,28 +125,28 @@ class LoginViewController: UIViewController {
 
 // MARK: - Login Google
 
-extension LoginViewController: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        guard
-            let authentication = user.authentication,
-            let idToken = authentication.idToken else { return }
-        
-        let credential = GoogleAuthProvider.credential(
-            withIDToken: idToken,
-            accessToken: authentication.accessToken)
-        
-        Auth.auth().signIn(with: credential) { authResult, error in
-            if let error = error {
-                print("Algo deu errado! \(error)")
-                return
-            }
-            //            let userInfo = viewModel.getUserData()
-                        self.performSegue(withIdentifier: "showTabBar", sender: nil)
-        }
-    }
-    
-    
-}
+//extension LoginViewController: GIDSignInDelegate {
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//        guard
+//            let authentication = user.authentication,
+//            let idToken = authentication.idToken else { return }
+//        
+//        let credential = GoogleAuthProvider.credential(
+//            withIDToken: idToken,
+//            accessToken: authentication.accessToken)
+//        
+//        Auth.auth().signIn(with: credential) { authResult, error in
+//            if let error = error {
+//                print("Algo deu errado! \(error)")
+//                return
+//            }
+//            //            let userInfo = viewModel.getUserData()
+//                        self.performSegue(withIdentifier: "showTabBar", sender: nil)
+//        }
+//    }
+//    
+//    
+//}
 
 // MARK: - Login Facebook
 

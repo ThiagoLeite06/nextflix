@@ -15,9 +15,9 @@ class MoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        viewModel.delegate = self
-        viewModel.didLoad()
+//        tableView.dataSource = self
+//        viewModel.delegate = self
+//        viewModel.didLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         let user = loginViewModel.getUserData()
-        loggedUserLbl.text = user.displayName
+//        loggedUserLbl.text = user.displayName
     }
     
 
