@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class MovieViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,16 +18,19 @@ class MoviesViewController: UIViewController {
 //        tableView.dataSource = self
 //        viewModel.delegate = self
 //        viewModel.didLoad()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? TituloSelecionadoViewController {
-            viewController.content = sender as? Movie
+       
+        NFService.shared.execute(.listMoviesRequests, expecting: MovieResponse.self) { result in
+            switch result {
+            case .success(let model):
+                print(model.results.count)
+            case .failure(let error):
+                print(String(describing: error))
+            }
         }
     }
 }
 
-extension MoviesViewController: MovieViewModelDelegate {
+extension MovieViewController: MovieViewModelDelegate {
     func reloadData() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -37,7 +40,7 @@ extension MoviesViewController: MovieViewModelDelegate {
 
 // MARK: - TableViewDataSource
 
-extension MoviesViewController: UITableViewDataSource{
+extension MovieViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
@@ -65,7 +68,7 @@ extension MoviesViewController: UITableViewDataSource{
 
 // MARK: - CollectionView
 
-extension MoviesViewController: UICollectionViewDataSource {
+extension MovieViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.movies.count
     }
@@ -80,7 +83,7 @@ extension MoviesViewController: UICollectionViewDataSource {
     
 }
 
-extension MoviesViewController: UICollectionViewDelegate {
+extension MovieViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movie = viewModel.movies[indexPath.row]
         performSegue(withIdentifier: "SegueFilmeDetailIdentifier", sender: movie)

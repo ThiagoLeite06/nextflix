@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeriesViewController: UIViewController {
+class SerieViewController: UIViewController {
     
     @IBOutlet weak var serieTableView: UITableView!
     
@@ -33,7 +33,7 @@ class SeriesViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension SeriesViewController: UITableViewDelegate {
+extension SerieViewController: UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let serie = viewModel.series[indexPath.row]
@@ -48,10 +48,10 @@ extension SeriesViewController: UITableViewDelegate {
 
 // MARK: - UITableViewDataSource
 
-extension SeriesViewController: UITableViewDataSource {
+extension SerieViewController: UITableViewDataSource {
     
     private func configTableView() {
-        serieTableView.dataSource = self
+         serieTableView.dataSource = self
         serieTableView.delegate = self
         serieTableView.tableFooterView = .init(frame: .zero)
     }
@@ -77,7 +77,7 @@ extension SeriesViewController: UITableViewDataSource {
 }
 
 
-extension SeriesViewController: SerieViewModelDelegate {
+extension SerieViewController: SerieViewModelDelegate {
     func errorAddFavorite() {
         //
     }

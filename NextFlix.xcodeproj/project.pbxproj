@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C3FC455B2A787D3AC8C24EF /* Pods_NextFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D4A0EBD32D7907A4649B1 /* Pods_NextFlix.framework */; };
+		37954E1229BACC29007222C5 /* NFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954E1129BACC29007222C5 /* NFService.swift */; };
+		37954E1429BACD46007222C5 /* NFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954E1329BACD46007222C5 /* NFRequest.swift */; };
+		37954E1629BACD60007222C5 /* NFEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954E1529BACD60007222C5 /* NFEndpoint.swift */; };
+		37F8CF7E29BC1E8F00D56E64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F8CF7D29BC1E8F00D56E64 /* TabBarController.swift */; };
 		380755832734D4DB00BA52C5 /* SerieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380755822734D4DB00BA52C5 /* SerieService.swift */; };
 		380755862734D7D600BA52C5 /* SerieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380755852734D7D600BA52C5 /* SerieResponse.swift */; };
 		384798CE2744663400D931D2 /* CastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384798CD2744663400D931D2 /* CastResponse.swift */; };
@@ -34,8 +38,8 @@
 		AFD7CE422715C18300BCA025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE402715C18300BCA025 /* Main.storyboard */; };
 		AFD7CE442715C18500BCA025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE432715C18500BCA025 /* Assets.xcassets */; };
 		AFD7CE472715C18500BCA025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */; };
-		AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE542716469100BCA025 /* MoviesViewController.swift */; };
-		AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SeriesViewController.swift */; };
+		AFD7CE552716469100BCA025 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE542716469100BCA025 /* MovieViewController.swift */; };
+		AFD7CE57271646A600BCA025 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CE56271646A600BCA025 /* SerieViewController.swift */; };
 		AFE06368275AA22E00DA344A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE06367275AA22E00DA344A /* ProfileViewController.swift */; };
 		AFE0636A275AAD5500DA344A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE06369275AAD5500DA344A /* User.swift */; };
 		AFE0636C275ADB1600DA344A /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0636B275ADB1600DA344A /* AuthenticationViewModel.swift */; };
@@ -64,6 +68,10 @@
 
 /* Begin PBXFileReference section */
 		1266C7DF9FBB551BDD65EE55 /* Pods-NextFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextFlix.debug.xcconfig"; path = "Target Support Files/Pods-NextFlix/Pods-NextFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		37954E1129BACC29007222C5 /* NFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFService.swift; sourceTree = "<group>"; };
+		37954E1329BACD46007222C5 /* NFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFRequest.swift; sourceTree = "<group>"; };
+		37954E1529BACD60007222C5 /* NFEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFEndpoint.swift; sourceTree = "<group>"; };
+		37F8CF7D29BC1E8F00D56E64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		380755822734D4DB00BA52C5 /* SerieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieService.swift; sourceTree = "<group>"; };
 		380755852734D7D600BA52C5 /* SerieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieResponse.swift; sourceTree = "<group>"; };
 		384798CD2744663400D931D2 /* CastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastResponse.swift; sourceTree = "<group>"; };
@@ -97,8 +105,8 @@
 		AFD7CE432715C18500BCA025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFD7CE462715C18500BCA025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFD7CE482715C18500BCA025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFD7CE542716469100BCA025 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
-		AFD7CE56271646A600BCA025 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		AFD7CE542716469100BCA025 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		AFD7CE56271646A600BCA025 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		AFE06367275AA22E00DA344A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFE06369275AAD5500DA344A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AFE0636B275ADB1600DA344A /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 		37954E0C29BAC277007222C5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				37F8CF7D29BC1E8F00D56E64 /* TabBarController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -152,6 +161,16 @@
 				AFD7CE452715C18500BCA025 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		37954E1029BACBF4007222C5 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				37954E1129BACC29007222C5 /* NFService.swift */,
+				37954E1329BACD46007222C5 /* NFRequest.swift */,
+				37954E1529BACD60007222C5 /* NFEndpoint.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 		3863125B271F8CB5003D72FB /* ViewModel */ = {
@@ -268,6 +287,7 @@
 		AFD7CE392715C18300BCA025 /* NextFlix */ = {
 			isa = PBXGroup;
 			children = (
+				37954E1029BACBF4007222C5 /* APIClient */,
 				37954E0F29BAC51E007222C5 /* Resources */,
 				D0D437122746F1F200FF3ACD /* CoreData */,
 				D0122727273608F5003A91C0 /* Protocols */,
@@ -287,8 +307,8 @@
 			children = (
 				37954E0C29BAC277007222C5 /* Core */,
 				38A4966B271C6C590005B8C1 /* TituloSelecionadoViewController.swift */,
-				AFD7CE542716469100BCA025 /* MoviesViewController.swift */,
-				AFD7CE56271646A600BCA025 /* SeriesViewController.swift */,
+				AFD7CE542716469100BCA025 /* MovieViewController.swift */,
+				AFD7CE56271646A600BCA025 /* SerieViewController.swift */,
 				D0A13CBD272219A800C4B72F /* LoginViewController.swift */,
 				D0A13CBF272219D800C4B72F /* RegisterScreenViewController.swift */,
 				AF9C13632745BEF000607287 /* FavoritesViewController.swift */,
@@ -529,13 +549,17 @@
 				38DE3F532758552F00C51DEE /* Favorites+CoreDataClass.swift in Sources */,
 				D0A13CC0272219D800C4B72F /* RegisterScreenViewController.swift in Sources */,
 				AF9C13722745D8FA00607287 /* FavoriteViewModel.swift in Sources */,
+				37954E1429BACD46007222C5 /* NFRequest.swift in Sources */,
+				37954E1229BACC29007222C5 /* NFService.swift in Sources */,
 				D0D437212746FBFC00FF3ACD /* CoreDataService.swift in Sources */,
 				AFD7CE3D2715C18300BCA025 /* SceneDelegate.swift in Sources */,
 				AFCC927B27346B1300FFB496 /* MovieViewModel.swift in Sources */,
 				D0A13CBE272219A800C4B72F /* LoginViewController.swift in Sources */,
-				AFD7CE57271646A600BCA025 /* SeriesViewController.swift in Sources */,
+				AFD7CE57271646A600BCA025 /* SerieViewController.swift in Sources */,
 				AF9C13622745BA2700607287 /* Favorites.xcdatamodeld in Sources */,
+				37F8CF7E29BC1E8F00D56E64 /* TabBarController.swift in Sources */,
 				AFE06368275AA22E00DA344A /* ProfileViewController.swift in Sources */,
+				37954E1629BACD60007222C5 /* NFEndpoint.swift in Sources */,
 				AF51ACEF2730A1D400505521 /* Company.swift in Sources */,
 				38DE3F542758552F00C51DEE /* Favorites+CoreDataProperties.swift in Sources */,
 				38A4966C271C6C590005B8C1 /* TituloSelecionadoViewController.swift in Sources */,
@@ -543,7 +567,7 @@
 				D0A13CC62722D82000C4B72F /* SeriesTableViewCell.swift in Sources */,
 				38AFA60627332E8B0059D795 /* Cast.swift in Sources */,
 				D0E9D86927383BD600F29ABA /* SerieViewModel.swift in Sources */,
-				AFD7CE552716469100BCA025 /* MoviesViewController.swift in Sources */,
+				AFD7CE552716469100BCA025 /* MovieViewController.swift in Sources */,
 				380755862734D7D600BA52C5 /* SerieResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
