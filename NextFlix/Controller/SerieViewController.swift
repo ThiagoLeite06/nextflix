@@ -51,7 +51,7 @@ extension SerieViewController: UITableViewDelegate {
 extension SerieViewController: UITableViewDataSource {
     
     private func configTableView() {
-         serieTableView.dataSource = self
+        serieTableView.dataSource = self
         serieTableView.delegate = self
         serieTableView.tableFooterView = .init(frame: .zero)
     }
