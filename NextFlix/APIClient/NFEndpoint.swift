@@ -9,6 +9,5 @@ import Foundation
 
 /// Represents unique API endpoint
 @frozen enum NFEndpoint: String {
-    case movie
-   
+    case movie, teste
 }
