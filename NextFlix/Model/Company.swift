@@ -16,4 +16,5 @@ struct Company {
     let name: String
     let origin_country: String
     let parent_company: String
+    let one_more_parameter: String
 }
