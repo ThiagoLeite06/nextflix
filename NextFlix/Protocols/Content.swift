@@ -15,6 +15,7 @@ protocol Content {
     
     var poster_path: String {get}
     var vote_average: Double {get}
+    var vote_null: int {get}
 }
 
 
