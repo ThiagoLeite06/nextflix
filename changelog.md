@@ -1,4 +1,5 @@
 ## RELEASE
+- create parameter
 
 [NXT] v 1.0
 - First step
