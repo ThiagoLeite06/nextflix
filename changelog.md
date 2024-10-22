@@ -1,6 +1,7 @@
 ## RELEASE
 - create parameter
 [NXT] v 1.3
+- fix something
 
 [NXT] v 1.2
 - Create vote nil

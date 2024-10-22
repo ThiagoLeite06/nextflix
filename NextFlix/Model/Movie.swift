@@ -24,8 +24,8 @@ struct Movie: Codable {
     let vote_average: Double
     let vote_count: Int
     
-//    let imageMovie: UIImage
-//    let title: String
+   let imageMovie: UIImage
+   let title: String
 //    let release: String
     
 }
