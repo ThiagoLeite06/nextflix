@@ -10,4 +10,5 @@ import Foundation
 struct User {
     let displayName: String
     let email: String
+    let telefone: String
 }
