@@ -2,6 +2,7 @@
 - create parameter
 [NXT] v 1.3
 - Set telefone
+- fix something
 
 [NXT] v 1.2
 - Create vote nil
